@@ -1,3 +1,4 @@
+/* eslint no-console:0 */
 var fs = require("fs");
 var path = require("path");
 
@@ -41,7 +42,13 @@ var serveBrowserified = function(file, standaloneName) {
 };
 
 app.get("/katex.js", serveBrowserified("./katex", "katex"));
-app.use("/test/jasmine", express["static"](path.dirname(require.resolve("jasmine-core/lib/jasmine-core/jasmine.js"))));
+app.use("/test/jasmine",
+    express["static"](
+        path.dirname(
+            require.resolve("jasmine-core/lib/jasmine-core/jasmine.js")
+        )
+    )
+);
 app.get("/test/katex-spec.js", serveBrowserified("./test/*[Ss]pec.js"));
 app.get("/contrib/auto-render/auto-render.js",
         serveBrowserified("./contrib/auto-render/auto-render",
@@ -54,19 +61,18 @@ app.get("/katex.css", function(req, res, next) {
             return;
         }
 
-        var parser = new less.Parser({
+        less.render(data, {
             paths: ["./static"],
-            filename: "katex.less"
-        });
-
-        parser.parse(data, function(err, tree) {
+            filename: "katex.less",
+        }, function(err, output) {
             if (err) {
+                console.error(String(err));
                 next(err);
                 return;
             }
 
             res.setHeader("Content-Type", "text/css");
-            res.send(tree.toCSS());
+            res.send(output.css);
         });
     });
 });
@@ -75,6 +81,8 @@ app.use(express["static"](path.join(__dirname, "static")));
 app.use(express["static"](path.join(__dirname, "build")));
 app.use("/test", express["static"](path.join(__dirname, "test")));
 app.use("/contrib", express["static"](path.join(__dirname, "contrib")));
+// app.use("/unicode-fonts",
+//     express["static"](path.join(__dirname, "static", "unicode-fonts")));
 
 app.use(function(err, req, res, next) {
     console.error(err.stack);

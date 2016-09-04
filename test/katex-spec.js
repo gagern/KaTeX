@@ -1,3 +1,4 @@
+/* eslint max-len:0 */
 /* global beforeEach: false */
 /* global jasmine: false */
 /* global expect: false */
@@ -16,7 +17,7 @@ var Style = require("../src/Style");
 var defaultSettings = new Settings({});
 var defaultOptions = new Options({
     style: Style.TEXT,
-    size: "size5"
+    size: "size5",
 });
 
 var _getBuilt = function(expr, settings) {
@@ -56,8 +57,39 @@ var getParsed = function(expr, settings) {
     return parseTree(expr, usedSettings);
 };
 
+var stripPositions = function(expr) {
+    if (typeof expr !== "object" || expr === null) {
+        return expr;
+    }
+    if (expr.lexer && typeof expr.start === "number") {
+        delete expr.lexer;
+        delete expr.start;
+        delete expr.end;
+    }
+    Object.keys(expr).forEach(function(key) {
+        stripPositions(expr[key]);
+    });
+    return expr;
+};
+
+var parseAndSetResult = function(expr, result, settings) {
+    try {
+        return parseTree(expr, settings || defaultSettings);
+    } catch (e) {
+        result.pass = false;
+        if (e instanceof ParseError) {
+            result.message = "'" + expr + "' failed " +
+                "parsing with error: " + e.message;
+        } else {
+            result.message = "'" + expr + "' failed " +
+                "parsing with unknown error: " + e.message;
+        }
+    }
+};
+
 beforeEach(function() {
     jasmine.addMatchers({
+
         toParse: function() {
             return {
                 compare: function(actual, settings) {
@@ -65,24 +97,11 @@ beforeEach(function() {
 
                     var result = {
                         pass: true,
-                        message: "'" + actual + "' succeeded parsing"
+                        message: "'" + actual + "' succeeded parsing",
                     };
-
-                    try {
-                        parseTree(actual, usedSettings);
-                    } catch (e) {
-                        result.pass = false;
-                        if (e instanceof ParseError) {
-                            result.message = "'" + actual + "' failed " +
-                                "parsing with error: " + e.message;
-                        } else {
-                            result.message = "'" + actual + "' failed " +
-                                "parsing with unknown error: " + e.message;
-                        }
-                    }
-
+                    parseAndSetResult(actual, result, usedSettings);
                     return result;
-                }
+                },
             };
         },
 
@@ -94,7 +113,7 @@ beforeEach(function() {
                     var result = {
                         pass: false,
                         message: "Expected '" + actual + "' to fail " +
-                            "parsing, but it succeeded"
+                            "parsing, but it succeeded",
                     };
 
                     try {
@@ -111,7 +130,7 @@ beforeEach(function() {
                     }
 
                     return result;
-                }
+                },
             };
         },
 
@@ -122,7 +141,7 @@ beforeEach(function() {
 
                     var result = {
                         pass: true,
-                        message: "'" + actual + "' succeeded in building"
+                        message: "'" + actual + "' succeeded in building",
                     };
 
                     expect(actual).toParse(usedSettings);
@@ -141,9 +160,39 @@ beforeEach(function() {
                     }
 
                     return result;
-                }
+                },
             };
-        }
+        },
+
+        toParseLike: function(util, baton) {
+            return {
+                compare: function(actual, expected) {
+                    var result = {
+                        pass: true,
+                        message: "Parse trees of '" + actual +
+                            "' and '" + expected + "' are equivalent",
+                    };
+
+                    var actualTree = parseAndSetResult(actual, result);
+                    if (!actualTree) {
+                        return result;
+                    }
+                    var expectedTree = parseAndSetResult(expected, result);
+                    if (!expectedTree) {
+                        return result;
+                    }
+                    stripPositions(actualTree);
+                    stripPositions(expectedTree);
+                    if (!util.equals(actualTree, expectedTree, baton)) {
+                        result.pass = false;
+                        result.message = "Parse trees of '" + actual +
+                            "' and '" + expected + "' are not equivalent";
+                    }
+                    return result;
+                },
+            };
+        },
+
     });
 });
 
@@ -153,8 +202,8 @@ describe("A parser", function() {
     });
 
     it("should ignore whitespace", function() {
-        var parseA = getParsed("    x    y    ");
-        var parseB = getParsed("xy");
+        var parseA = stripPositions(getParsed("    x    y    "));
+        var parseB = stripPositions(getParsed("xy"));
         expect(parseA).toEqual(parseB);
     });
 });
@@ -339,8 +388,8 @@ describe("A subscript and superscript parser", function() {
     });
 
     it("should produce the same thing regardless of order", function() {
-        var parseA = getParsed("x^2_3");
-        var parseB = getParsed("x_3^2");
+        var parseA = stripPositions(getParsed("x^2_3"));
+        var parseB = stripPositions(getParsed("x_3^2"));
 
         expect(parseA).toEqual(parseB);
     });
@@ -420,11 +469,12 @@ describe("A parser with limit controls", function() {
 
     it("should have the rightmost limit control determine the limits property " +
         "of the preceding op node", function() {
-            var parsedInput = getParsed("\\int\\nolimits\\limits_2^2");
-            expect(parsedInput[0].value.base.value.limits).toBe(true);
 
-            parsedInput = getParsed("\\int\\limits_2\\nolimits^2");
-            expect(parsedInput[0].value.base.value.limits).toBe(false);
+        var parsedInput = getParsed("\\int\\nolimits\\limits_2^2");
+        expect(parsedInput[0].value.base.value.limits).toBe(true);
+
+        parsedInput = getParsed("\\int\\limits_2\\nolimits^2");
+        expect(parsedInput[0].value.base.value.limits).toBe(false);
     });
 });
 
@@ -562,7 +612,7 @@ describe("An over parser", function() {
     var simpleOver = "1 \\over x";
     var complexOver = "1+2i \\over 3+4i";
 
-    it("should not fail", function () {
+    it("should not fail", function() {
         expect(simpleOver).toParse();
         expect(complexOver).toParse();
     });
@@ -583,21 +633,21 @@ describe("An over parser", function() {
         expect(parse.value.denom).toBeDefined();
     });
 
-    it("should create a numerator from the atoms before \\over", function () {
+    it("should create a numerator from the atoms before \\over", function() {
         var parse = getParsed(complexOver)[0];
 
         var numer = parse.value.numer;
         expect(numer.value.length).toEqual(4);
     });
 
-    it("should create a demonimator from the atoms after \\over", function () {
+    it("should create a demonimator from the atoms after \\over", function() {
         var parse = getParsed(complexOver)[0];
 
         var denom = parse.value.numer;
         expect(denom.value.length).toEqual(4);
     });
 
-    it("should handle empty numerators", function () {
+    it("should handle empty numerators", function() {
         var emptyNumerator = "\\over x";
         var parse = getParsed(emptyNumerator)[0];
         expect(parse.type).toEqual("genfrac");
@@ -605,7 +655,7 @@ describe("An over parser", function() {
         expect(parse.value.denom).toBeDefined();
     });
 
-    it("should handle empty denominators", function () {
+    it("should handle empty denominators", function() {
         var emptyDenominator = "1 \\over";
         var parse = getParsed(emptyDenominator)[0];
         expect(parse.type).toEqual("genfrac");
@@ -613,7 +663,7 @@ describe("An over parser", function() {
         expect(parse.value.denom).toBeDefined();
     });
 
-    it("should handle \\displaystyle correctly", function () {
+    it("should handle \\displaystyle correctly", function() {
         var displaystyleExpression = "\\displaystyle 1 \\over 2";
         var parse = getParsed(displaystyleExpression)[0];
         expect(parse.type).toEqual("genfrac");
@@ -621,7 +671,14 @@ describe("An over parser", function() {
         expect(parse.value.denom).toBeDefined();
     });
 
-    it("should handle nested factions", function () {
+    it("should handle \\textstyle correctly", function() {
+        expect("\\textstyle 1 \\over 2")
+            .toParseLike("\\frac{\\textstyle 1}{2}");
+        expect("{\\textstyle 1} \\over 2")
+            .toParseLike("\\frac{\\textstyle 1}{2}");
+    });
+
+    it("should handle nested factions", function() {
         var nestedOverExpression = "{1 \\over 2} \\over 3";
         var parse = getParsed(nestedOverExpression)[0];
         expect(parse.type).toEqual("genfrac");
@@ -632,7 +689,7 @@ describe("An over parser", function() {
         expect(parse.value.denom.value[0].value).toEqual("3");
     });
 
-    it("should fail with multiple overs in the same group", function () {
+    it("should fail with multiple overs in the same group", function() {
         var badMultipleOvers = "1 \\over 2 + 3 \\over 4";
         expect(badMultipleOvers).toNotParse();
 
@@ -757,7 +814,7 @@ describe("A color parser", function() {
         expect(badCustomColorExpression).toNotParse();
     });
 
-    it("should parse new colors from the branding guide", function(){
+    it("should parse new colors from the branding guide", function() {
         expect(newColorExpression).toParse();
     });
 
@@ -908,6 +965,31 @@ describe("A rule parser", function() {
     });
 });
 
+describe("A kern parser", function() {
+    var emKern = "\\kern{1em}";
+    var exKern = "\\kern{1ex}";
+    var badUnitRule = "\\kern{1px}";
+    var noNumberRule = "\\kern{em}";
+
+    it("should list the correct units", function() {
+        var emParse = getParsed(emKern)[0];
+        var exParse = getParsed(exKern)[0];
+
+        expect(emParse.value.dimension.unit).toEqual("em");
+        expect(exParse.value.dimension.unit).toEqual("ex");
+    });
+
+    it("should not parse invalid units", function() {
+        expect(badUnitRule).toNotParse();
+        expect(noNumberRule).toNotParse();
+    });
+
+    it("should parse negative sizes", function() {
+        var parse = getParsed("\\kern{-1em}")[0];
+        expect(parse.value.dimension.number).toBeCloseTo(-1);
+    });
+});
+
 describe("A left/right parser", function() {
     var normalLeftRight = "\\left( \\dfrac{x}{y} \\right)";
     var emptyRight = "\\left( \\dfrac{x}{y} \\right.";
@@ -1025,7 +1107,7 @@ describe("A TeX-compliant parser", function() {
             "\\rule{1em}",
             "\\llap",
             "\\bigl",
-            "\\text"
+            "\\text",
         ];
 
         for (var i = 0; i < missingGroups.length; i++) {
@@ -1052,7 +1134,7 @@ describe("A TeX-compliant parser", function() {
             // work
             // "\\llap \\frac x y",
             "\\llap \\llap x",
-            "\\sqrt \\llap x"
+            "\\sqrt \\llap x",
         ];
 
         for (var i = 0; i < badArguments.length; i++) {
@@ -1070,7 +1152,7 @@ describe("A TeX-compliant parser", function() {
             "\\frac x {\\llap y}",
             "\\llap {\\frac x y}",
             "\\llap {\\llap x}",
-            "\\sqrt {\\llap x}"
+            "\\sqrt {\\llap x}",
         ];
 
         for (var i = 0; i < goodArguments.length; i++) {
@@ -1083,7 +1165,7 @@ describe("A TeX-compliant parser", function() {
             "x^\\sqrt x",
             "x^\\llap x",
             "x_\\sqrt x",
-            "x_\\llap x"
+            "x_\\llap x",
         ];
 
         for (var i = 0; i < badSupSubscripts.length; i++) {
@@ -1096,7 +1178,7 @@ describe("A TeX-compliant parser", function() {
             "x^{\\sqrt x}",
             "x^{\\llap x}",
             "x_{\\sqrt x}",
-            "x_{\\llap x}"
+            "x_{\\llap x}",
         ];
 
         for (var i = 0; i < goodSupSubscripts.length; i++) {
@@ -1135,7 +1217,7 @@ describe("A TeX-compliant parser", function() {
             "\\frac x \\left( y \\right)",
             "\\llap \\left( x \\right)",
             "\\sqrt \\left( x \\right)",
-            "x^\\left( x \\right)"
+            "x^\\left( x \\right)",
         ];
 
         for (var i = 0; i < badLeftArguments.length; i++) {
@@ -1149,7 +1231,7 @@ describe("A TeX-compliant parser", function() {
             "\\frac x {\\left( y \\right)}",
             "\\llap {\\left( x \\right)}",
             "\\sqrt {\\left( x \\right)}",
-            "x^{\\left( x \\right)}"
+            "x^{\\left( x \\right)}",
         ];
 
         for (var i = 0; i < goodLeftArguments.length; i++) {
@@ -1189,8 +1271,8 @@ describe("A style change parser", function() {
     });
 });
 
-describe("A font parser", function () {
-    it("should parse \\mathrm, \\mathbb, and \\mathit", function () {
+describe("A font parser", function() {
+    it("should parse \\mathrm, \\mathbb, and \\mathit", function() {
         expect("\\mathrm x").toParse();
         expect("\\mathbb x").toParse();
         expect("\\mathit x").toParse();
@@ -1199,12 +1281,12 @@ describe("A font parser", function () {
         expect("\\mathit {x + 1}").toParse();
     });
 
-    it("should parse \\mathcal and \\mathfrak", function () {
+    it("should parse \\mathcal and \\mathfrak", function() {
         expect("\\mathcal{ABC123}").toParse();
         expect("\\mathfrak{abcABC123}").toParse();
     });
 
-    it("should produce the correct fonts", function () {
+    it("should produce the correct fonts", function() {
         var mathbbParse = getParsed("\\mathbb x")[0];
         expect(mathbbParse.value.font).toEqual("mathbb");
         expect(mathbbParse.value.type).toEqual("font");
@@ -1226,7 +1308,7 @@ describe("A font parser", function () {
         expect(mathfrakParse.value.type).toEqual("font");
     });
 
-    it("should parse nested font commands", function () {
+    it("should parse nested font commands", function() {
         var nestedParse = getParsed("\\mathbb{R \\neq \\mathrm{R}}")[0];
         expect(nestedParse.value.font).toEqual("mathbb");
         expect(nestedParse.value.type).toEqual("font");
@@ -1240,7 +1322,7 @@ describe("A font parser", function () {
         expect(bbBody[2].value.type).toEqual("font");
     });
 
-    it("should work with \\color", function () {
+    it("should work with \\color", function() {
         var colorMathbbParse = getParsed("\\color{blue}{\\mathbb R}")[0];
         expect(colorMathbbParse.value.type).toEqual("color");
         expect(colorMathbbParse.value.color).toEqual("blue");
@@ -1250,11 +1332,11 @@ describe("A font parser", function () {
         expect(body[0].value.font).toEqual("mathbb");
     });
 
-    it("should not parse a series of font commands", function () {
+    it("should not parse a series of font commands", function() {
         expect("\\mathbb \\mathrm R").toNotParse();
     });
 
-    it("should nest fonts correctly", function () {
+    it("should nest fonts correctly", function() {
         var bf = getParsed("\\mathbf{a\\mathrm{b}c}")[0];
         expect(bf.value.type).toEqual("font");
         expect(bf.value.font).toEqual("mathbf");
@@ -1270,28 +1352,28 @@ describe("A font parser", function () {
     });
 });
 
-describe("An HTML font tree-builder", function () {
-    it("should render \\mathbb{R} with the correct font", function () {
+describe("An HTML font tree-builder", function() {
+    it("should render \\mathbb{R} with the correct font", function() {
         var markup = katex.renderToString("\\mathbb{R}");
         expect(markup).toContain("<span class=\"mord mathbb\">R</span>");
     });
 
-    it("should render \\mathrm{R} with the correct font", function () {
+    it("should render \\mathrm{R} with the correct font", function() {
         var markup = katex.renderToString("\\mathrm{R}");
         expect(markup).toContain("<span class=\"mord mathrm\">R</span>");
     });
 
-    it("should render \\mathcal{R} with the correct font", function () {
+    it("should render \\mathcal{R} with the correct font", function() {
         var markup = katex.renderToString("\\mathcal{R}");
         expect(markup).toContain("<span class=\"mord mathcal\">R</span>");
     });
 
-    it("should render \\mathfrak{R} with the correct font", function () {
+    it("should render \\mathfrak{R} with the correct font", function() {
         var markup = katex.renderToString("\\mathfrak{R}");
         expect(markup).toContain("<span class=\"mord mathfrak\">R</span>");
     });
 
-    it("should render a combination of font and color changes", function () {
+    it("should render a combination of font and color changes", function() {
         var markup = katex.renderToString("\\color{blue}{\\mathbb R}");
         var span = "<span class=\"mord mathbb\" style=\"color:blue;\">R</span>";
         expect(markup).toContain(span);
@@ -1303,10 +1385,10 @@ describe("An HTML font tree-builder", function () {
 });
 
 
-describe("A MathML font tree-builder", function () {
+describe("A MathML font tree-builder", function() {
     var contents = "Ax2k\\omega\\Omega\\imath+";
 
-    it("should render " + contents + " with the correct mathvariants", function () {
+    it("should render " + contents + " with the correct mathvariants", function() {
         var tree = getParsed(contents);
         var markup = buildMathML(tree, contents, defaultOptions).toMarkup();
         expect(markup).toContain("<mi>A</mi>");
@@ -1318,7 +1400,7 @@ describe("A MathML font tree-builder", function () {
         expect(markup).toContain("<mo>+</mo>");
     });
 
-    it("should render \\mathbb{" + contents + "} with the correct mathvariants", function () {
+    it("should render \\mathbb{" + contents + "} with the correct mathvariants", function() {
         var tex = "\\mathbb{" + contents + "}";
         var tree = getParsed(tex);
         var markup = buildMathML(tree, tex, defaultOptions).toMarkup();
@@ -1331,7 +1413,7 @@ describe("A MathML font tree-builder", function () {
         expect(markup).toContain("<mo>+</mo>");
     });
 
-    it("should render \\mathrm{" + contents + "} with the correct mathvariants", function () {
+    it("should render \\mathrm{" + contents + "} with the correct mathvariants", function() {
         var tex = "\\mathrm{" + contents + "}";
         var tree = getParsed(tex);
         var markup = buildMathML(tree, tex, defaultOptions).toMarkup();
@@ -1344,7 +1426,7 @@ describe("A MathML font tree-builder", function () {
         expect(markup).toContain("<mo>+</mo>");
     });
 
-    it("should render \\mathit{" + contents + "} with the correct mathvariants", function () {
+    it("should render \\mathit{" + contents + "} with the correct mathvariants", function() {
         var tex = "\\mathit{" + contents + "}";
         var tree = getParsed(tex);
         var markup = buildMathML(tree, tex, defaultOptions).toMarkup();
@@ -1357,7 +1439,7 @@ describe("A MathML font tree-builder", function () {
         expect(markup).toContain("<mo>+</mo>");
     });
 
-    it("should render \\mathbf{" + contents + "} with the correct mathvariants", function () {
+    it("should render \\mathbf{" + contents + "} with the correct mathvariants", function() {
         var tex = "\\mathbf{" + contents + "}";
         var tree = getParsed(tex);
         var markup = buildMathML(tree, tex, defaultOptions).toMarkup();
@@ -1370,7 +1452,7 @@ describe("A MathML font tree-builder", function () {
         expect(markup).toContain("<mo>+</mo>");
     });
 
-    it("should render \\mathcal{" + contents + "} with the correct mathvariants", function () {
+    it("should render \\mathcal{" + contents + "} with the correct mathvariants", function() {
         var tex = "\\mathcal{" + contents + "}";
         var tree = getParsed(tex);
         var markup = buildMathML(tree, tex, defaultOptions).toMarkup();
@@ -1385,7 +1467,7 @@ describe("A MathML font tree-builder", function () {
         expect(markup).toContain("<mo>+</mo>");
     });
 
-    it("should render \\mathfrak{" + contents + "} with the correct mathvariants", function () {
+    it("should render \\mathfrak{" + contents + "} with the correct mathvariants", function() {
         var tex = "\\mathfrak{" + contents + "}";
         var tree = getParsed(tex);
         var markup = buildMathML(tree, tex, defaultOptions).toMarkup();
@@ -1400,7 +1482,7 @@ describe("A MathML font tree-builder", function () {
         expect(markup).toContain("<mo>+</mo>");
     });
 
-    it("should render \\mathscr{" + contents + "} with the correct mathvariants", function () {
+    it("should render \\mathscr{" + contents + "} with the correct mathvariants", function() {
         var tex = "\\mathscr{" + contents + "}";
         var tree = getParsed(tex);
         var markup = buildMathML(tree, tex, defaultOptions).toMarkup();
@@ -1415,7 +1497,7 @@ describe("A MathML font tree-builder", function () {
         expect(markup).toContain("<mo>+</mo>");
     });
 
-    it("should render \\mathsf{" + contents + "} with the correct mathvariants", function () {
+    it("should render \\mathsf{" + contents + "} with the correct mathvariants", function() {
         var tex = "\\mathsf{" + contents + "}";
         var tree = getParsed(tex);
         var markup = buildMathML(tree, tex, defaultOptions).toMarkup();
@@ -1428,7 +1510,7 @@ describe("A MathML font tree-builder", function () {
         expect(markup).toContain("<mo>+</mo>");
     });
 
-    it("should render a combination of font and color changes", function () {
+    it("should render a combination of font and color changes", function() {
         var tex = "\\color{blue}{\\mathbb R}";
         var tree = getParsed(tex);
         var markup = buildMathML(tree, tex, defaultOptions).toMarkup();
@@ -1496,7 +1578,7 @@ describe("A markup generator", function() {
 
 describe("A parse tree generator", function() {
     it("generates a tree", function() {
-        var tree = katex.__parse("\\sigma^2");
+        var tree = stripPositions(katex.__parse("\\sigma^2"));
         expect(JSON.stringify(tree)).toEqual(JSON.stringify([
             {
                 "type": "supsub",
@@ -1504,17 +1586,17 @@ describe("A parse tree generator", function() {
                     "base": {
                         "type": "mathord",
                         "value": "\\sigma",
-                        "mode": "math"
+                        "mode": "math",
                     },
                     "sup": {
                         "type": "textord",
                         "value": "2",
-                        "mode": "math"
+                        "mode": "math",
                     },
-                    "sub": undefined
+                    "sub": undefined,
                 },
-                "mode": "math"
-            }
+                "mode": "math",
+            },
         ]));
     });
 });
@@ -1600,8 +1682,8 @@ describe("A phantom builder", function() {
     });
 });
 
-describe("A parser error", function () {
-    it("should report the position of an error", function () {
+describe("A parser error", function() {
+    it("should report the position of an error", function() {
         try {
             parseTree("\\sqrt}", defaultSettings);
         } catch (e) {
@@ -1643,7 +1725,7 @@ describe("An array environment", function() {
         var parse = getParsed("\\begin{array}r1\\\\20\\end{array}");
         expect(parse[0].type).toBe("array");
         expect(parse[0].value.cols).toEqual([
-            { type: "align", align: "r" }
+            { type: "align", align: "r" },
         ]);
     });
 
@@ -1656,7 +1738,7 @@ describe("An array environment", function() {
             { type: "separator", separator: "|" },
             { type: "separator", separator: "|" },
             { type: "align", align: "c" },
-            { type: "separator", separator: "|" }
+            { type: "separator", separator: "|" },
         ]);
     });
 
@@ -1731,7 +1813,7 @@ describe("A parser that does not throw on unsupported commands", function() {
     var errorColor = "#933";
     var noThrowSettings = new Settings({
         throwOnError: false,
-        errorColor: errorColor
+        errorColor: errorColor,
     });
 
     it("should still parse on unrecognized control sequences", function() {
@@ -1773,5 +1855,26 @@ describe("The symbol table integraty", function() {
         expect(getBuilt(">")).toEqual(getBuilt("\\gt"));
         expect(getBuilt("\\left<\\frac{1}{x}\\right>"))
             .toEqual(getBuilt("\\left\\lt\\frac{1}{x}\\right\\gt"));
+    });
+});
+
+describe("A macro expander", function() {
+
+    var compareParseTree = function(actual, expected, macros) {
+        var settings = new Settings({macros: macros});
+        actual = stripPositions(parseTree(actual, settings));
+        expected = stripPositions(parseTree(expected, defaultSettings));
+        expect(actual).toEqual(expected);
+    };
+
+    it("should produce individual tokens", function() {
+        compareParseTree("e^\\foo", "e^1 23", {"\\foo": "123"});
+    });
+
+    it("should allow for multiple expansion", function() {
+        compareParseTree("1\\foo2", "1aa2", {
+            "\\foo": "\\bar\\bar",
+            "\\bar": "a",
+        });
     });
 });

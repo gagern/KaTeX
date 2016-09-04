@@ -36,6 +36,7 @@ Cases: |
 Colors:
     tex: \blue{a}\color{#0f0}{b}\color{red}{c}
     nolatex: different syntax and different scope
+DashesAndQuotes: \text{``a'' b---c -- d----`e'-{-}-f}--``x''
 DeepFontSizing:
     tex: |
         a^{\big| x^{\big(}}_{\Big\uparrow} +
@@ -58,6 +59,7 @@ FractionTest: \dfrac{a}{b}\frac{a}{b}\tfrac{a}{b}\;-\dfrac12\;1\tfrac12
 Functions: \sin\cos\tan\ln\log
 GreekLetters: \alpha\beta\gamma\omega
 KaTeX: \KaTeX
+Kern: \frac{a\kern{1em}b}{c}a\kern{1em}b\kern{1ex}c\kern{-0.25em}d
 Lap: ab\llap{f}cd\rlap{g}h
 LeftRight: \left( x^2 \right) \left\{ x^{x^{x^{x^x}}} \right.
 LeftRightListStyling: a+\left(x+y\right)-x
@@ -85,7 +87,7 @@ NullDelimiterInteraction: a \bigl. + 2 \quad \left. + a \right)
 OpLimits: |
     {\sin_2^2 \lim_2^2 \int_2^2 \sum_2^2}
     {\displaystyle \lim_2^2 \int_2^2 \intop_2^2 \sum_2^2}
-Overline: \overline{x}\overline{x}\overline{x^{x^{x^x}}} \blue{\overline{y}}
+OverUnderline: x\underline{x}\underline{\underline{x}}\underline{x_{x_{x_x}}}\underline{x^{x^{x^x}}}\overline{x}\overline{x}\overline{x^{x^{x^x}}} \blue{\overline{\underline{x}}\underline{\overline{x}}}
 Phantom: \dfrac{1+\phantom{x^{\blue{2}}} = x}{1+x^{\blue{2}} = x}
 PrimeSpacing: f'+f_2'+f^{f'}
 RlapBug: \frac{\rlap{x}}{2}
@@ -105,8 +107,14 @@ SqrtRoot: |
 SupSubCharacterBox: a_2f_2{f}_2{aa}_2{af}_2
 SupSubHorizSpacing: |
     x^{x^{x}}\Big|x_{x_{x_{x_{x}}}}\bigg|x^{x^{x_{x_{x_{x_{x}}}}}}\bigg|
+SupSubLeftAlignReset: |
+    \omega^8_{888} \quad \frac{1}{\hat{\omega}^{8}_{888}} \quad \displaystyle\sum_{\omega^{8}_{888}}
 SupSubOffsets: \displaystyle \int_{2+3}x f^{2+3}+3\lim_{2+3+4+5}f
+Symbols1: |
+    \maltese\degree\pounds\$
+    \text{\maltese\degree}
 Text: \frac{a}{b}\text{c~ {ab} \ e}+fg
+Unicode: \begin{matrix}\text{ÀàÇçÉéÏïÖöÛû} \\ \text{БГДЖЗЙЛФЦШЫЮЯ} \\ \text{여보세요} \\ \text{私はバナナです} \end{matrix}
 UnsupportedCmds:
     tex: \err\,\frac\fracerr3\,2^\superr_\suberr\,\sqrt\sqrterr
     noThrow: 1

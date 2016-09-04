@@ -10,11 +10,12 @@
 
     > .katex {
         display: inline-block;
+        text-align: initial;
     }
 }
 
 .katex {
-    font: normal 1.21em KaTeX_Main;
+    font: normal 1.21em KaTeX_Main, Times New Roman, serif;
     line-height: 1.2;
     white-space: nowrap;
 
@@ -351,25 +352,23 @@
         position: relative;
     }
 
-    .overline {
+    .overline .overline-line,
+    .underline .underline-line {
+        width: 100%;
 
-        .overline-line {
-            width: 100%;
+        &:before {
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+            content: "";
+            display: block;
+        }
 
-            &:before {
-                border-bottom-style: solid;
-                border-bottom-width: 1px;
-                content: "";
-                display: block;
-            }
-
-            &:after {
-                border-bottom-style: solid;
-                border-bottom-width: 0.04em;
-                content: "";
-                display: block;
-                margin-top: -1px;
-            }
+        &:after {
+            border-bottom-style: solid;
+            border-bottom-width: 0.04em;
+            content: "";
+            display: block;
+            margin-top: -1px;
         }
     }
 

@@ -1,3 +1,4 @@
+/* eslint no-console:0, prefer-spread:0 */
 "use strict";
 
 var childProcess = require("child_process");
@@ -8,6 +9,7 @@ var net = require("net");
 var pako = require("pako");
 var path = require("path");
 var selenium = require("selenium-webdriver");
+var firefox = require("selenium-webdriver/firefox");
 
 var app = require("../../server");
 var data = require("../../test/screenshotter/ss_data");
@@ -22,50 +24,53 @@ var opts = require("nomnom")
     .option("browser", {
         abbr: "b",
         "default": "firefox",
-        help: "Name of the browser to use"
+        help: "Name of the browser to use",
     })
     .option("container", {
         abbr: "c",
         type: "string",
-        help: "Name or ID of a running docker container to contact"
+        help: "Name or ID of a running docker container to contact",
     })
     .option("seleniumURL", {
         full: "selenium-url",
-        help: "Full URL of the Selenium web driver"
+        help: "Full URL of the Selenium web driver",
     })
     .option("seleniumIP", {
         full: "selenium-ip",
-        help: "IP address of the Selenium web driver"
+        help: "IP address of the Selenium web driver",
     })
     .option("seleniumPort", {
         full: "selenium-port",
         "default": 4444,
-        help: "Port number of the Selenium web driver"
+        help: "Port number of the Selenium web driver",
     })
     .option("katexURL", {
         full: "katex-url",
-        help: "Full URL of the KaTeX development server"
+        help: "Full URL of the KaTeX development server",
     })
     .option("katexIP", {
         full: "katex-ip",
         "default": "localhost",
-        help: "Full URL of the KaTeX development server"
+        help: "Full URL of the KaTeX development server",
     })
     .option("katexPort", {
         full: "katex-port",
-        help: "Port number of the KaTeX development server"
+        help: "Port number of the KaTeX development server",
     })
     .option("include", {
         abbr: "i",
-        help: "Comma-separated list of test cases to process"
+        help: "Comma-separated list of test cases to process",
     })
     .option("exclude", {
         abbr: "x",
-        help: "Comma-separated list of test cases to exclude"
+        help: "Comma-separated list of test cases to exclude",
     })
     .option("verify", {
         flag: true,
-        help: "Check whether screenshot matches current file content"
+        help: "Check whether screenshot matches current file content",
+    })
+    .option("wait", {
+        help: "Wait this many seconds between page load and screenshot",
     })
     .parse();
 
@@ -120,7 +125,7 @@ if (!seleniumURL && opts.container) {
             process.exit(2);
         }
         katexIP = config[1];
-    } catch(e) {
+    } catch (e) {
         seleniumIP = katexIP = dockerCmd(
             "inspect", "-f", "{{.NetworkSettings.Gateway}}", opts.container);
     }
@@ -184,7 +189,7 @@ function tryConnect() {
     }
     var sock = net.connect({
         host: seleniumIP,
-        port: +seleniumPort
+        port: +seleniumPort,
     });
     sock.on("connect", function() {
         sock.end();
@@ -204,6 +209,12 @@ function tryConnect() {
 var driver;
 function buildDriver() {
     var builder = new selenium.Builder().forBrowser(opts.browser);
+    var ffProfile = new firefox.Profile();
+    ffProfile.setPreference(
+        "browser.startup.homepage_override.mstone", "ignore");
+    ffProfile.setPreference("browser.startup.page", 0);
+    var ffOptions = new firefox.Options().setProfile(ffProfile);
+    builder.setFirefoxOptions(ffOptions);
     if (seleniumURL) {
         builder.usingServer(seleniumURL);
     }
@@ -216,7 +227,8 @@ function buildDriver() {
 //////////////////////////////////////////////////////////////////////
 // Set the screen size
 
-var targetW = 1024, targetH = 768;
+var targetW = 1024;
+var targetH = 768;
 function setSize(reqW, reqH) {
     return driver.manage().window().setSize(reqW, reqH).then(function() {
         return driver.takeScreenshot();
@@ -240,7 +252,7 @@ function imageDimensions(img) {
     return {
         buf: buf,
         width: buf.readUInt32BE(16),
-        height: buf.readUInt32BE(20)
+        height: buf.readUInt32BE(20),
     };
 }
 
@@ -272,6 +284,9 @@ function takeScreenshot(key) {
 
     var url = katexURL + "test/screenshotter/test.html?" + itm.query;
     driver.get(url);
+    if (opts.wait) {
+        browserSideWait(1000 * opts.wait);
+    }
     driver.takeScreenshot().then(haveScreenshot).then(function() {
         if (--countdown === 0) {
             if (listOfFailed.length) {
@@ -303,7 +318,7 @@ function takeScreenshot(key) {
             }
         }
         var opt = new jspngopt.Optimizer({
-            pako: pako
+            pako: pako,
         });
         var buf = opt.bufferSync(img.buf);
         if (loadExpected) {

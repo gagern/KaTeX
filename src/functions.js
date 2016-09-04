@@ -55,6 +55,7 @@ var ParseError = require("./ParseError");
  *                     should parse. If the optional arguments aren't found,
  *                     `null` will be passed to the handler in their place.
  *                     (default 0)
+ *  - infix: (optional) Must be true if the function is an infix operator.
  *
  * The last argument is that implementation, the handler for the function(s).
  * It is called to handle these functions and their arguments.
@@ -91,7 +92,8 @@ function defineFunction(names, props, handler) {
         greediness: (props.greediness === undefined) ? 1 : props.greediness,
         allowedInText: !!props.allowedInText,
         numOptionalArgs: props.numOptionalArgs || 0,
-        handler: handler
+        infix: !!props.infix,
+        handler: handler,
     };
     for (var i = 0; i < names.length; ++i) {
         module.exports[names[i]] = data;
@@ -101,14 +103,14 @@ function defineFunction(names, props, handler) {
 // A normal square root
 defineFunction("\\sqrt", {
     numArgs: 1,
-    numOptionalArgs: 1
+    numOptionalArgs: 1,
 }, function(context, args) {
     var index = args[0];
     var body = args[1];
     return {
         type: "sqrt",
         body: body,
-        index: index
+        index: index,
     };
 });
 
@@ -116,7 +118,7 @@ defineFunction("\\sqrt", {
 defineFunction("\\text", {
     numArgs: 1,
     argTypes: ["text"],
-    greediness: 2
+    greediness: 2,
 }, function(context, args) {
     var body = args[0];
     // Since the corresponding buildHTML/buildMathML function expects a
@@ -131,7 +133,7 @@ defineFunction("\\text", {
 
     return {
         type: "text",
-        body: inner
+        body: inner,
     };
 });
 
@@ -140,7 +142,7 @@ defineFunction("\\color", {
     numArgs: 2,
     allowedInText: true,
     greediness: 3,
-    argTypes: ["color", "original"]
+    argTypes: ["color", "original"],
 }, function(context, args) {
     var color = args[0];
     var body = args[1];
@@ -155,18 +157,29 @@ defineFunction("\\color", {
     return {
         type: "color",
         color: color.value,
-        value: inner
+        value: inner,
     };
 });
 
 // An overline
 defineFunction("\\overline", {
-    numArgs: 1
+    numArgs: 1,
 }, function(context, args) {
     var body = args[0];
     return {
         type: "overline",
-        body: body
+        body: body,
+    };
+});
+
+// An underline
+defineFunction("\\underline", {
+    numArgs: 1,
+}, function(context, args) {
+    var body = args[0];
+    return {
+        type: "underline",
+        body: body,
     };
 });
 
@@ -174,7 +187,7 @@ defineFunction("\\overline", {
 defineFunction("\\rule", {
     numArgs: 2,
     numOptionalArgs: 1,
-    argTypes: ["size", "size", "size"]
+    argTypes: ["size", "size", "size"],
 }, function(context, args) {
     var shift = args[0];
     var width = args[1];
@@ -183,21 +196,31 @@ defineFunction("\\rule", {
         type: "rule",
         shift: shift && shift.value,
         width: width.value,
-        height: height.value
+        height: height.value,
+    };
+});
+
+defineFunction("\\kern", {
+    numArgs: 1,
+    argTypes: ["size"],
+}, function(context, args) {
+    return {
+        type: "kern",
+        dimension: args[0].value,
     };
 });
 
 // A KaTeX logo
 defineFunction("\\KaTeX", {
-    numArgs: 0
+    numArgs: 0,
 }, function(context) {
     return {
-        type: "katex"
+        type: "katex",
     };
 });
 
 defineFunction("\\phantom", {
-    numArgs: 1
+    numArgs: 1,
 }, function(context, args) {
     var body = args[0];
     var inner;
@@ -209,7 +232,7 @@ defineFunction("\\phantom", {
 
     return {
         type: "phantom",
-        value: inner
+        value: inner,
     };
 });
 
@@ -230,7 +253,7 @@ var delimiterSizes = {
     "\\big"  : {type: "textord", size: 1},
     "\\Big"  : {type: "textord", size: 2},
     "\\bigg" : {type: "textord", size: 3},
-    "\\Bigg" : {type: "textord", size: 4}
+    "\\Bigg" : {type: "textord", size: 4},
 };
 
 var delimiters = [
@@ -245,13 +268,13 @@ var delimiters = [
     "\\uparrow", "\\Uparrow",
     "\\downarrow", "\\Downarrow",
     "\\updownarrow", "\\Updownarrow",
-    "."
+    ".",
 ];
 
 var fontAliases = {
     "\\Bbb": "\\mathbb",
     "\\bold": "\\mathbf",
-    "\\frak": "\\mathfrak"
+    "\\frak": "\\mathfrak",
 };
 
 // Single-argument color functions
@@ -268,11 +291,11 @@ defineFunction([
     "\\mintA", "\\mintB", "\\mintC",
     "\\grayA", "\\grayB", "\\grayC", "\\grayD", "\\grayE",
     "\\grayF", "\\grayG", "\\grayH", "\\grayI",
-    "\\kaBlue", "\\kaGreen"
+    "\\kaBlue", "\\kaGreen",
 ], {
     numArgs: 1,
     allowedInText: true,
-    greediness: 3
+    greediness: 3,
 }, function(context, args) {
     var body = args[0];
     var atoms;
@@ -285,7 +308,7 @@ defineFunction([
     return {
         type: "color",
         color: "katex-" + context.funcName.slice(1),
-        value: atoms
+        value: atoms,
     };
 });
 
@@ -298,44 +321,44 @@ defineFunction([
     "\\arcsin", "\\arccos", "\\arctan", "\\arg", "\\cos", "\\cosh",
     "\\cot", "\\coth", "\\csc", "\\deg", "\\dim", "\\exp", "\\hom",
     "\\ker", "\\lg", "\\ln", "\\log", "\\sec", "\\sin", "\\sinh",
-    "\\tan","\\tanh"
+    "\\tan", "\\tanh",
 ], {
-    numArgs: 0
+    numArgs: 0,
 }, function(context) {
     return {
         type: "op",
         limits: false,
         symbol: false,
-        body: context.funcName
+        body: context.funcName,
     };
 });
 
 // Limits, not symbols
 defineFunction([
     "\\det", "\\gcd", "\\inf", "\\lim", "\\liminf", "\\limsup", "\\max",
-    "\\min", "\\Pr", "\\sup"
+    "\\min", "\\Pr", "\\sup",
 ], {
-    numArgs: 0
+    numArgs: 0,
 }, function(context) {
     return {
         type: "op",
         limits: true,
         symbol: false,
-        body: context.funcName
+        body: context.funcName,
     };
 });
 
 // No limits, symbols
 defineFunction([
-    "\\int", "\\iint", "\\iiint", "\\oint"
+    "\\int", "\\iint", "\\iiint", "\\oint",
 ], {
-    numArgs: 0
+    numArgs: 0,
 }, function(context) {
     return {
         type: "op",
         limits: false,
         symbol: true,
-        body: context.funcName
+        body: context.funcName,
     };
 });
 
@@ -343,25 +366,25 @@ defineFunction([
 defineFunction([
     "\\coprod", "\\bigvee", "\\bigwedge", "\\biguplus", "\\bigcap",
     "\\bigcup", "\\intop", "\\prod", "\\sum", "\\bigotimes",
-    "\\bigoplus", "\\bigodot", "\\bigsqcup", "\\smallint"
+    "\\bigoplus", "\\bigodot", "\\bigsqcup", "\\smallint",
 ], {
-    numArgs: 0
+    numArgs: 0,
 }, function(context) {
     return {
         type: "op",
         limits: true,
         symbol: true,
-        body: context.funcName
+        body: context.funcName,
     };
 });
 
 // Fractions
 defineFunction([
     "\\dfrac", "\\frac", "\\tfrac",
-    "\\dbinom", "\\binom", "\\tbinom"
+    "\\dbinom", "\\binom", "\\tbinom",
 ], {
     numArgs: 2,
-    greediness: 2
+    greediness: 2,
 }, function(context, args) {
     var numer = args[0];
     var denom = args[1];
@@ -371,31 +394,31 @@ defineFunction([
     var size = "auto";
 
     switch (context.funcName) {
-    case "\\dfrac":
-    case "\\frac":
-    case "\\tfrac":
-        hasBarLine = true;
-        break;
-    case "\\dbinom":
-    case "\\binom":
-    case "\\tbinom":
-        hasBarLine = false;
-        leftDelim = "(";
-        rightDelim = ")";
-        break;
-    default:
-        throw new Error("Unrecognized genfrac command");
+        case "\\dfrac":
+        case "\\frac":
+        case "\\tfrac":
+            hasBarLine = true;
+            break;
+        case "\\dbinom":
+        case "\\binom":
+        case "\\tbinom":
+            hasBarLine = false;
+            leftDelim = "(";
+            rightDelim = ")";
+            break;
+        default:
+            throw new Error("Unrecognized genfrac command");
     }
 
     switch (context.funcName) {
-    case "\\dfrac":
-    case "\\dbinom":
-        size = "display";
-        break;
-    case "\\tfrac":
-    case "\\tbinom":
-        size = "text";
-        break;
+        case "\\dfrac":
+        case "\\dbinom":
+            size = "display";
+            break;
+        case "\\tfrac":
+        case "\\tbinom":
+            size = "text";
+            break;
     }
 
     return {
@@ -405,19 +428,19 @@ defineFunction([
         hasBarLine: hasBarLine,
         leftDelim: leftDelim,
         rightDelim: rightDelim,
-        size: size
+        size: size,
     };
 });
 
 // Left and right overlap functions
 defineFunction(["\\llap", "\\rlap"], {
     numArgs: 1,
-    allowedInText: true
+    allowedInText: true,
 }, function(context, args) {
     var body = args[0];
     return {
         type: context.funcName.slice(1),
-        body: body
+        body: body,
     };
 });
 
@@ -427,16 +450,15 @@ defineFunction([
     "\\bigr", "\\Bigr", "\\biggr", "\\Biggr",
     "\\bigm", "\\Bigm", "\\biggm", "\\Biggm",
     "\\big",  "\\Big",  "\\bigg",  "\\Bigg",
-    "\\left", "\\right"
+    "\\left", "\\right",
 ], {
-    numArgs: 1
+    numArgs: 1,
 }, function(context, args) {
     var delim = args[0];
     if (!utils.contains(delimiters, delim.value)) {
         throw new ParseError(
             "Invalid delimiter: '" + delim.value + "' after '" +
-                context.funcName + "'",
-            context.lexer, context.positions[1]);
+            context.funcName + "'", delim);
     }
 
     // \left and \right are caught somewhere in Parser.js, which is
@@ -444,14 +466,14 @@ defineFunction([
     if (context.funcName === "\\left" || context.funcName === "\\right") {
         return {
             type: "leftright",
-            value: delim.value
+            value: delim.value,
         };
     } else {
         return {
             type: "delimsizing",
             size: delimiterSizes[context.funcName].size,
             delimType: delimiterSizes[context.funcName].type,
-            value: delim.value
+            value: delim.value,
         };
     }
 });
@@ -459,14 +481,14 @@ defineFunction([
 // Sizing functions (handled in Parser.js explicitly, hence no handler)
 defineFunction([
     "\\tiny", "\\scriptsize", "\\footnotesize", "\\small",
-    "\\normalsize", "\\large", "\\Large", "\\LARGE", "\\huge", "\\Huge"
+    "\\normalsize", "\\large", "\\Large", "\\LARGE", "\\huge", "\\Huge",
 ], 0, null);
 
 // Style changing functions (handled in Parser.js explicitly, hence no
 // handler)
 defineFunction([
     "\\displaystyle", "\\textstyle", "\\scriptstyle",
-    "\\scriptscriptstyle"
+    "\\scriptscriptstyle",
 ], 0, null);
 
 defineFunction([
@@ -478,11 +500,11 @@ defineFunction([
     "\\mathtt",
 
     // aliases
-    "\\Bbb", "\\bold", "\\frak"
+    "\\Bbb", "\\bold", "\\frak",
 ], {
     numArgs: 1,
-    greediness: 2
-}, function (context, args) {
+    greediness: 2,
+}, function(context, args) {
     var body = args[0];
     var func = context.funcName;
     if (func in fontAliases) {
@@ -491,45 +513,47 @@ defineFunction([
     return {
         type: "font",
         font: func.slice(1),
-        body: body
+        body: body,
     };
 });
 
 // Accents
 defineFunction([
     "\\acute", "\\grave", "\\ddot", "\\tilde", "\\bar", "\\breve",
-    "\\check", "\\hat", "\\vec", "\\dot"
+    "\\check", "\\hat", "\\vec", "\\dot",
     // We don't support expanding accents yet
     // "\\widetilde", "\\widehat"
 ], {
-    numArgs: 1
+    numArgs: 1,
 }, function(context, args) {
     var base = args[0];
     return {
         type: "accent",
         accent: context.funcName,
-        base: base
+        base: base,
     };
 });
 
 // Infix generalized fractions
 defineFunction(["\\over", "\\choose"], {
-    numArgs: 0
-}, function (context) {
+    numArgs: 0,
+    infix: true,
+}, function(context) {
     var replaceWith;
     switch (context.funcName) {
-    case "\\over":
-        replaceWith = "\\frac";
-        break;
-    case "\\choose":
-        replaceWith = "\\binom";
-        break;
-    default:
-        throw new Error("Unrecognized infix genfrac command");
+        case "\\over":
+            replaceWith = "\\frac";
+            break;
+        case "\\choose":
+            replaceWith = "\\binom";
+            break;
+        default:
+            throw new Error("Unrecognized infix genfrac command");
     }
     return {
         type: "infix",
-        replaceWith: replaceWith
+        replaceWith: replaceWith,
+        token: context.token,
     };
 });
 
@@ -537,25 +561,23 @@ defineFunction(["\\over", "\\choose"], {
 defineFunction(["\\\\", "\\cr"], {
     numArgs: 0,
     numOptionalArgs: 1,
-    argTypes: ["size"]
+    argTypes: ["size"],
 }, function(context, args) {
     var size = args[0];
     return {
         type: "cr",
-        size: size
+        size: size,
     };
 });
 
 // Environment delimiters
 defineFunction(["\\begin", "\\end"], {
     numArgs: 1,
-    argTypes: ["text"]
+    argTypes: ["text"],
 }, function(context, args) {
     var nameGroup = args[0];
     if (nameGroup.type !== "ordgroup") {
-        throw new ParseError(
-            "Invalid environment name",
-            context.lexer, context.positions[1]);
+        throw new ParseError("Invalid environment name", nameGroup);
     }
     var name = "";
     for (var i = 0; i < nameGroup.value.length; ++i) {
@@ -564,6 +586,6 @@ defineFunction(["\\begin", "\\end"], {
     return {
         type: "environment",
         name: name,
-        namepos: context.positions[1]
+        nameGroup: nameGroup,
     };
 });

@@ -249,7 +249,7 @@ groupTypes.sqrt = function(group, options) {
         node = new mathMLTree.MathNode(
             "mroot", [
                 buildGroup(group.value.body, options),
-                buildGroup(group.value.index, options)
+                buildGroup(group.value.index, options),
             ]);
     } else {
         node = new mathMLTree.MathNode(
@@ -381,7 +381,7 @@ groupTypes.styling = function(group, options) {
         "display": ["0", "true"],
         "text": ["0", "false"],
         "script": ["1", "false"],
-        "scriptscript": ["2", "false"]
+        "scriptscript": ["2", "false"],
     };
 
     var attr = styleAttributes[group.value.style];
@@ -422,9 +422,30 @@ groupTypes.overline = function(group, options) {
     return node;
 };
 
+groupTypes.underline = function(group, options) {
+    var operator = new mathMLTree.MathNode(
+        "mo", [new mathMLTree.TextNode("\u203e")]);
+    operator.setAttribute("stretchy", "true");
+
+    var node = new mathMLTree.MathNode(
+        "munder",
+        [buildGroup(group.value.body, options),
+         operator]);
+    node.setAttribute("accentunder", "true");
+
+    return node;
+};
+
 groupTypes.rule = function(group) {
     // TODO(emily): Figure out if there's an actual way to draw black boxes
     // in MathML.
+    var node = new mathMLTree.MathNode("mrow");
+
+    return node;
+};
+
+groupTypes.kern = function(group) {
+    // TODO(kevin): Figure out if there's a way to add space in MathML
     var node = new mathMLTree.MathNode("mrow");
 
     return node;
