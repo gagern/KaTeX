@@ -108,206 +108,213 @@
     <GlyphID id="102" name="degree"/>
     <GlyphID id="103" name="plusminus"/>
     <GlyphID id="104" name="acute"/>
-    <GlyphID id="105" name="multiply"/>
-    <GlyphID id="106" name="divide"/>
-    <GlyphID id="107" name="dotlessi"/>
-    <GlyphID id="108" name="uni0237"/>
-    <GlyphID id="109" name="circumflex"/>
-    <GlyphID id="110" name="caron"/>
-    <GlyphID id="111" name="uni02C9"/>
-    <GlyphID id="112" name="uni02CA"/>
-    <GlyphID id="113" name="uni02CB"/>
-    <GlyphID id="114" name="breve"/>
-    <GlyphID id="115" name="dotaccent"/>
-    <GlyphID id="116" name="ring"/>
-    <GlyphID id="117" name="tilde"/>
-    <GlyphID id="118" name="gravecomb"/>
-    <GlyphID id="119" name="acutecomb"/>
-    <GlyphID id="120" name="uni0302"/>
-    <GlyphID id="121" name="tildecomb"/>
-    <GlyphID id="122" name="uni0304"/>
-    <GlyphID id="123" name="uni0306"/>
-    <GlyphID id="124" name="uni0307"/>
-    <GlyphID id="125" name="uni0308"/>
-    <GlyphID id="126" name="uni030A"/>
-    <GlyphID id="127" name="uni030B"/>
-    <GlyphID id="128" name="uni030C"/>
-    <GlyphID id="129" name="uni0338"/>
-    <GlyphID id="130" name="Gamma"/>
-    <GlyphID id="131" name="Delta"/>
-    <GlyphID id="132" name="Theta"/>
-    <GlyphID id="133" name="Lambda"/>
-    <GlyphID id="134" name="Xi"/>
-    <GlyphID id="135" name="Pi"/>
-    <GlyphID id="136" name="Sigma"/>
-    <GlyphID id="137" name="Upsilon"/>
-    <GlyphID id="138" name="Phi"/>
-    <GlyphID id="139" name="Psi"/>
-    <GlyphID id="140" name="Omega"/>
-    <GlyphID id="141" name="uni2002"/>
-    <GlyphID id="142" name="uni2003"/>
-    <GlyphID id="143" name="uni2004"/>
-    <GlyphID id="144" name="uni2005"/>
-    <GlyphID id="145" name="uni2006"/>
-    <GlyphID id="146" name="uni2009"/>
-    <GlyphID id="147" name="uni200A"/>
-    <GlyphID id="148" name="endash"/>
-    <GlyphID id="149" name="emdash"/>
-    <GlyphID id="150" name="quoteleft"/>
-    <GlyphID id="151" name="quoteright"/>
-    <GlyphID id="152" name="quotedblleft"/>
-    <GlyphID id="153" name="quotedblright"/>
-    <GlyphID id="154" name="dagger"/>
-    <GlyphID id="155" name="daggerdbl"/>
-    <GlyphID id="156" name="ellipsis"/>
-    <GlyphID id="157" name="minute"/>
-    <GlyphID id="158" name="uni20D7"/>
-    <GlyphID id="159" name="uni210F"/>
-    <GlyphID id="160" name="Ifraktur"/>
-    <GlyphID id="161" name="afii61289"/>
-    <GlyphID id="162" name="weierstrass"/>
-    <GlyphID id="163" name="Rfraktur"/>
-    <GlyphID id="164" name="aleph"/>
-    <GlyphID id="165" name="arrowleft"/>
-    <GlyphID id="166" name="arrowup"/>
-    <GlyphID id="167" name="arrowright"/>
-    <GlyphID id="168" name="arrowdown"/>
-    <GlyphID id="169" name="arrowboth"/>
-    <GlyphID id="170" name="arrowupdn"/>
-    <GlyphID id="171" name="uni2196"/>
-    <GlyphID id="172" name="uni2197"/>
-    <GlyphID id="173" name="uni2198"/>
-    <GlyphID id="174" name="uni2199"/>
-    <GlyphID id="175" name="uni21A6"/>
-    <GlyphID id="176" name="uni21A9"/>
-    <GlyphID id="177" name="uni21AA"/>
-    <GlyphID id="178" name="uni21BC"/>
-    <GlyphID id="179" name="uni21BD"/>
-    <GlyphID id="180" name="uni21C0"/>
-    <GlyphID id="181" name="uni21C1"/>
-    <GlyphID id="182" name="uni21CC"/>
-    <GlyphID id="183" name="arrowdblleft"/>
-    <GlyphID id="184" name="arrowdblup"/>
-    <GlyphID id="185" name="arrowdblright"/>
-    <GlyphID id="186" name="arrowdbldown"/>
-    <GlyphID id="187" name="arrowdblboth"/>
-    <GlyphID id="188" name="uni21D5"/>
-    <GlyphID id="189" name="universal"/>
-    <GlyphID id="190" name="partialdiff"/>
-    <GlyphID id="191" name="existential"/>
-    <GlyphID id="192" name="emptyset"/>
-    <GlyphID id="193" name="gradient"/>
-    <GlyphID id="194" name="element"/>
-    <GlyphID id="195" name="notelement"/>
-    <GlyphID id="196" name="suchthat"/>
-    <GlyphID id="197" name="minus"/>
-    <GlyphID id="198" name="uni2213"/>
-    <GlyphID id="199" name="uni2215"/>
-    <GlyphID id="200" name="uni2216"/>
-    <GlyphID id="201" name="asteriskmath"/>
-    <GlyphID id="202" name="uni2218"/>
-    <GlyphID id="203" name="uni2219"/>
-    <GlyphID id="204" name="radical"/>
-    <GlyphID id="205" name="proportional"/>
-    <GlyphID id="206" name="infinity"/>
-    <GlyphID id="207" name="angle"/>
-    <GlyphID id="208" name="uni2223"/>
-    <GlyphID id="209" name="uni2225"/>
-    <GlyphID id="210" name="logicaland"/>
-    <GlyphID id="211" name="logicalor"/>
-    <GlyphID id="212" name="intersection"/>
-    <GlyphID id="213" name="union"/>
-    <GlyphID id="214" name="integral"/>
-    <GlyphID id="215" name="similar"/>
-    <GlyphID id="216" name="uni2240"/>
-    <GlyphID id="217" name="uni2243"/>
-    <GlyphID id="218" name="congruent"/>
-    <GlyphID id="219" name="approxequal"/>
-    <GlyphID id="220" name="uni224D"/>
-    <GlyphID id="221" name="uni2250"/>
-    <GlyphID id="222" name="notequal"/>
-    <GlyphID id="223" name="equivalence"/>
-    <GlyphID id="224" name="lessequal"/>
-    <GlyphID id="225" name="greaterequal"/>
-    <GlyphID id="226" name="uni226A"/>
-    <GlyphID id="227" name="uni226B"/>
-    <GlyphID id="228" name="uni227A"/>
-    <GlyphID id="229" name="uni227B"/>
-    <GlyphID id="230" name="propersubset"/>
-    <GlyphID id="231" name="propersuperset"/>
-    <GlyphID id="232" name="reflexsubset"/>
-    <GlyphID id="233" name="reflexsuperset"/>
-    <GlyphID id="234" name="uni228E"/>
-    <GlyphID id="235" name="uni2291"/>
-    <GlyphID id="236" name="uni2292"/>
-    <GlyphID id="237" name="uni2293"/>
-    <GlyphID id="238" name="uni2294"/>
-    <GlyphID id="239" name="circleplus"/>
-    <GlyphID id="240" name="uni2296"/>
-    <GlyphID id="241" name="circlemultiply"/>
-    <GlyphID id="242" name="uni2298"/>
-    <GlyphID id="243" name="uni2299"/>
-    <GlyphID id="244" name="uni22A2"/>
-    <GlyphID id="245" name="uni22A3"/>
-    <GlyphID id="246" name="uni22A4"/>
-    <GlyphID id="247" name="perpendicular"/>
-    <GlyphID id="248" name="uni22A8"/>
-    <GlyphID id="249" name="uni22C4"/>
-    <GlyphID id="250" name="dotmath"/>
-    <GlyphID id="251" name="uni22C6"/>
-    <GlyphID id="252" name="uni22C8"/>
-    <GlyphID id="253" name="uni22EE"/>
-    <GlyphID id="254" name="uni22EF"/>
-    <GlyphID id="255" name="uni22F1"/>
-    <GlyphID id="256" name="uni2308"/>
-    <GlyphID id="257" name="uni2309"/>
-    <GlyphID id="258" name="uni230A"/>
-    <GlyphID id="259" name="uni230B"/>
-    <GlyphID id="260" name="uni2322"/>
-    <GlyphID id="261" name="uni2323"/>
-    <GlyphID id="262" name="uni23B0"/>
-    <GlyphID id="263" name="uni23B1"/>
-    <GlyphID id="264" name="uni25B3"/>
-    <GlyphID id="265" name="uni25B9"/>
-    <GlyphID id="266" name="uni25BD"/>
-    <GlyphID id="267" name="uni25C3"/>
-    <GlyphID id="268" name="uni25EF"/>
-    <GlyphID id="269" name="spade"/>
-    <GlyphID id="270" name="uni2661"/>
-    <GlyphID id="271" name="uni2662"/>
-    <GlyphID id="272" name="club"/>
-    <GlyphID id="273" name="uni266D"/>
-    <GlyphID id="274" name="uni266E"/>
-    <GlyphID id="275" name="uni266F"/>
-    <GlyphID id="276" name="uni27E8"/>
-    <GlyphID id="277" name="uni27E9"/>
-    <GlyphID id="278" name="uni27EE"/>
-    <GlyphID id="279" name="uni27EF"/>
-    <GlyphID id="280" name="uni27F5"/>
-    <GlyphID id="281" name="uni27F6"/>
-    <GlyphID id="282" name="uni27F7"/>
-    <GlyphID id="283" name="uni27F8"/>
-    <GlyphID id="284" name="uni27F9"/>
-    <GlyphID id="285" name="uni27FA"/>
-    <GlyphID id="286" name="uni27FC"/>
-    <GlyphID id="287" name="uni2A3F"/>
-    <GlyphID id="288" name="uni2AAF"/>
-    <GlyphID id="289" name="uni2AB0"/>
-    <GlyphID id="290" name="uniEFFD"/>
-    <GlyphID id="291" name="uniEFFE"/>
-    <GlyphID id="292" name="uniEFFF"/>
+    <GlyphID id="105" name="AE"/>
+    <GlyphID id="106" name="multiply"/>
+    <GlyphID id="107" name="Oslash"/>
+    <GlyphID id="108" name="germandbls"/>
+    <GlyphID id="109" name="ae"/>
+    <GlyphID id="110" name="divide"/>
+    <GlyphID id="111" name="oslash"/>
+    <GlyphID id="112" name="dotlessi"/>
+    <GlyphID id="113" name="OE"/>
+    <GlyphID id="114" name="oe"/>
+    <GlyphID id="115" name="uni0237"/>
+    <GlyphID id="116" name="circumflex"/>
+    <GlyphID id="117" name="caron"/>
+    <GlyphID id="118" name="uni02C9"/>
+    <GlyphID id="119" name="uni02CA"/>
+    <GlyphID id="120" name="uni02CB"/>
+    <GlyphID id="121" name="breve"/>
+    <GlyphID id="122" name="dotaccent"/>
+    <GlyphID id="123" name="ring"/>
+    <GlyphID id="124" name="tilde"/>
+    <GlyphID id="125" name="gravecomb"/>
+    <GlyphID id="126" name="acutecomb"/>
+    <GlyphID id="127" name="uni0302"/>
+    <GlyphID id="128" name="tildecomb"/>
+    <GlyphID id="129" name="uni0304"/>
+    <GlyphID id="130" name="uni0306"/>
+    <GlyphID id="131" name="uni0307"/>
+    <GlyphID id="132" name="uni0308"/>
+    <GlyphID id="133" name="uni030A"/>
+    <GlyphID id="134" name="uni030B"/>
+    <GlyphID id="135" name="uni030C"/>
+    <GlyphID id="136" name="uni0338"/>
+    <GlyphID id="137" name="Gamma"/>
+    <GlyphID id="138" name="Delta"/>
+    <GlyphID id="139" name="Theta"/>
+    <GlyphID id="140" name="Lambda"/>
+    <GlyphID id="141" name="Xi"/>
+    <GlyphID id="142" name="Pi"/>
+    <GlyphID id="143" name="Sigma"/>
+    <GlyphID id="144" name="Upsilon"/>
+    <GlyphID id="145" name="Phi"/>
+    <GlyphID id="146" name="Psi"/>
+    <GlyphID id="147" name="Omega"/>
+    <GlyphID id="148" name="uni2002"/>
+    <GlyphID id="149" name="uni2003"/>
+    <GlyphID id="150" name="uni2004"/>
+    <GlyphID id="151" name="uni2005"/>
+    <GlyphID id="152" name="uni2006"/>
+    <GlyphID id="153" name="uni2009"/>
+    <GlyphID id="154" name="uni200A"/>
+    <GlyphID id="155" name="endash"/>
+    <GlyphID id="156" name="emdash"/>
+    <GlyphID id="157" name="quoteleft"/>
+    <GlyphID id="158" name="quoteright"/>
+    <GlyphID id="159" name="quotedblleft"/>
+    <GlyphID id="160" name="quotedblright"/>
+    <GlyphID id="161" name="dagger"/>
+    <GlyphID id="162" name="daggerdbl"/>
+    <GlyphID id="163" name="ellipsis"/>
+    <GlyphID id="164" name="minute"/>
+    <GlyphID id="165" name="uni20D7"/>
+    <GlyphID id="166" name="uni210F"/>
+    <GlyphID id="167" name="Ifraktur"/>
+    <GlyphID id="168" name="afii61289"/>
+    <GlyphID id="169" name="weierstrass"/>
+    <GlyphID id="170" name="Rfraktur"/>
+    <GlyphID id="171" name="aleph"/>
+    <GlyphID id="172" name="arrowleft"/>
+    <GlyphID id="173" name="arrowup"/>
+    <GlyphID id="174" name="arrowright"/>
+    <GlyphID id="175" name="arrowdown"/>
+    <GlyphID id="176" name="arrowboth"/>
+    <GlyphID id="177" name="arrowupdn"/>
+    <GlyphID id="178" name="uni2196"/>
+    <GlyphID id="179" name="uni2197"/>
+    <GlyphID id="180" name="uni2198"/>
+    <GlyphID id="181" name="uni2199"/>
+    <GlyphID id="182" name="uni21A6"/>
+    <GlyphID id="183" name="uni21A9"/>
+    <GlyphID id="184" name="uni21AA"/>
+    <GlyphID id="185" name="uni21BC"/>
+    <GlyphID id="186" name="uni21BD"/>
+    <GlyphID id="187" name="uni21C0"/>
+    <GlyphID id="188" name="uni21C1"/>
+    <GlyphID id="189" name="uni21CC"/>
+    <GlyphID id="190" name="arrowdblleft"/>
+    <GlyphID id="191" name="arrowdblup"/>
+    <GlyphID id="192" name="arrowdblright"/>
+    <GlyphID id="193" name="arrowdbldown"/>
+    <GlyphID id="194" name="arrowdblboth"/>
+    <GlyphID id="195" name="uni21D5"/>
+    <GlyphID id="196" name="universal"/>
+    <GlyphID id="197" name="partialdiff"/>
+    <GlyphID id="198" name="existential"/>
+    <GlyphID id="199" name="emptyset"/>
+    <GlyphID id="200" name="gradient"/>
+    <GlyphID id="201" name="element"/>
+    <GlyphID id="202" name="notelement"/>
+    <GlyphID id="203" name="suchthat"/>
+    <GlyphID id="204" name="minus"/>
+    <GlyphID id="205" name="uni2213"/>
+    <GlyphID id="206" name="uni2215"/>
+    <GlyphID id="207" name="uni2216"/>
+    <GlyphID id="208" name="asteriskmath"/>
+    <GlyphID id="209" name="uni2218"/>
+    <GlyphID id="210" name="uni2219"/>
+    <GlyphID id="211" name="radical"/>
+    <GlyphID id="212" name="proportional"/>
+    <GlyphID id="213" name="infinity"/>
+    <GlyphID id="214" name="angle"/>
+    <GlyphID id="215" name="uni2223"/>
+    <GlyphID id="216" name="uni2225"/>
+    <GlyphID id="217" name="logicaland"/>
+    <GlyphID id="218" name="logicalor"/>
+    <GlyphID id="219" name="intersection"/>
+    <GlyphID id="220" name="union"/>
+    <GlyphID id="221" name="integral"/>
+    <GlyphID id="222" name="similar"/>
+    <GlyphID id="223" name="uni2240"/>
+    <GlyphID id="224" name="uni2243"/>
+    <GlyphID id="225" name="congruent"/>
+    <GlyphID id="226" name="approxequal"/>
+    <GlyphID id="227" name="uni224D"/>
+    <GlyphID id="228" name="uni2250"/>
+    <GlyphID id="229" name="notequal"/>
+    <GlyphID id="230" name="equivalence"/>
+    <GlyphID id="231" name="lessequal"/>
+    <GlyphID id="232" name="greaterequal"/>
+    <GlyphID id="233" name="uni226A"/>
+    <GlyphID id="234" name="uni226B"/>
+    <GlyphID id="235" name="uni227A"/>
+    <GlyphID id="236" name="uni227B"/>
+    <GlyphID id="237" name="propersubset"/>
+    <GlyphID id="238" name="propersuperset"/>
+    <GlyphID id="239" name="reflexsubset"/>
+    <GlyphID id="240" name="reflexsuperset"/>
+    <GlyphID id="241" name="uni228E"/>
+    <GlyphID id="242" name="uni2291"/>
+    <GlyphID id="243" name="uni2292"/>
+    <GlyphID id="244" name="uni2293"/>
+    <GlyphID id="245" name="uni2294"/>
+    <GlyphID id="246" name="circleplus"/>
+    <GlyphID id="247" name="uni2296"/>
+    <GlyphID id="248" name="circlemultiply"/>
+    <GlyphID id="249" name="uni2298"/>
+    <GlyphID id="250" name="uni2299"/>
+    <GlyphID id="251" name="uni22A2"/>
+    <GlyphID id="252" name="uni22A3"/>
+    <GlyphID id="253" name="uni22A4"/>
+    <GlyphID id="254" name="perpendicular"/>
+    <GlyphID id="255" name="uni22A8"/>
+    <GlyphID id="256" name="uni22C4"/>
+    <GlyphID id="257" name="dotmath"/>
+    <GlyphID id="258" name="uni22C6"/>
+    <GlyphID id="259" name="uni22C8"/>
+    <GlyphID id="260" name="uni22EE"/>
+    <GlyphID id="261" name="uni22EF"/>
+    <GlyphID id="262" name="uni22F1"/>
+    <GlyphID id="263" name="uni2308"/>
+    <GlyphID id="264" name="uni2309"/>
+    <GlyphID id="265" name="uni230A"/>
+    <GlyphID id="266" name="uni230B"/>
+    <GlyphID id="267" name="uni2322"/>
+    <GlyphID id="268" name="uni2323"/>
+    <GlyphID id="269" name="uni23B0"/>
+    <GlyphID id="270" name="uni23B1"/>
+    <GlyphID id="271" name="uni25B3"/>
+    <GlyphID id="272" name="uni25B9"/>
+    <GlyphID id="273" name="uni25BD"/>
+    <GlyphID id="274" name="uni25C3"/>
+    <GlyphID id="275" name="uni25EF"/>
+    <GlyphID id="276" name="spade"/>
+    <GlyphID id="277" name="uni2661"/>
+    <GlyphID id="278" name="uni2662"/>
+    <GlyphID id="279" name="club"/>
+    <GlyphID id="280" name="uni266D"/>
+    <GlyphID id="281" name="uni266E"/>
+    <GlyphID id="282" name="uni266F"/>
+    <GlyphID id="283" name="uni27E8"/>
+    <GlyphID id="284" name="uni27E9"/>
+    <GlyphID id="285" name="uni27EE"/>
+    <GlyphID id="286" name="uni27EF"/>
+    <GlyphID id="287" name="uni27F5"/>
+    <GlyphID id="288" name="uni27F6"/>
+    <GlyphID id="289" name="uni27F7"/>
+    <GlyphID id="290" name="uni27F8"/>
+    <GlyphID id="291" name="uni27F9"/>
+    <GlyphID id="292" name="uni27FA"/>
+    <GlyphID id="293" name="uni27FC"/>
+    <GlyphID id="294" name="uni2A3F"/>
+    <GlyphID id="295" name="uni2AAF"/>
+    <GlyphID id="296" name="uni2AB0"/>
+    <GlyphID id="297" name="uniEFFD"/>
+    <GlyphID id="298" name="uniEFFE"/>
+    <GlyphID id="299" name="uniEFFF"/>
   </GlyphOrder>
 
   <head>
     <!-- Most of this table will be recalculated by the compiler -->
     <tableVersion value="1.0"/>
     <fontRevision value="1.0"/>
-    <checkSumAdjustment value="0xd0eb1d63"/>
+    <checkSumAdjustment value="0xed7ba699"/>
     <magicNumber value="0x5f0f3cf5"/>
     <flags value="00000000 00011111"/>
     <unitsPerEm value="1000"/>
-    <created value="Mon Jun 29 22:52:19 2015"/>
-    <modified value="Mon Jun 29 22:52:19 2015"/>
+    <created value="Tue Jan 17 04:00:36 2017"/>
+    <modified value="Tue Jan 17 04:00:36 2017"/>
     <xMin value="-639"/>
     <yMin value="-272"/>
     <xMax value="1803"/>
@@ -336,13 +343,13 @@
     <reserved2 value="0"/>
     <reserved3 value="0"/>
     <metricDataFormat value="0"/>
-    <numberOfHMetrics value="293"/>
+    <numberOfHMetrics value="300"/>
   </hhea>
 
   <maxp>
     <!-- Most of this table will be recalculated by the compiler -->
     <tableVersion value="0x10000"/>
-    <numGlyphs value="293"/>
+    <numGlyphs value="300"/>
     <maxPoints value="172"/>
     <maxContours value="5"/>
     <maxCompositePoints value="0"/>
@@ -352,8 +359,8 @@
     <maxStorage value="60"/>
     <maxFunctionDefs value="119"/>
     <maxInstructionDefs value="0"/>
-    <maxStackElements value="122"/>
-    <maxSizeOfInstructions value="344"/>
+    <maxStackElements value="131"/>
+    <maxSizeOfInstructions value="383"/>
     <maxComponentElements value="0"/>
     <maxComponentDepth value="0"/>
   </maxp>
@@ -415,6 +422,7 @@
     <mtx name=".notdef" width="250" lsb="50"/>
     <mtx name=".null" width="0" lsb="0"/>
     <mtx name="A" width="750" lsb="32"/>
+    <mtx name="AE" width="903" lsb="32"/>
     <mtx name="B" width="708" lsb="28"/>
     <mtx name="C" width="722" lsb="56"/>
     <mtx name="D" width="764" lsb="27"/>
@@ -433,7 +441,9 @@
     <mtx name="M" width="917" lsb="29"/>
     <mtx name="N" width="750" lsb="25"/>
     <mtx name="O" width="778" lsb="56"/>
+    <mtx name="OE" width="1014" lsb="70"/>
     <mtx name="Omega" width="722" lsb="44"/>
+    <mtx name="Oslash" width="778" lsb="56"/>
     <mtx name="P" width="681" lsb="27"/>
     <mtx name="Phi" width="722" lsb="56"/>
     <mtx name="Pi" width="750" lsb="25"/>
@@ -456,6 +466,7 @@
     <mtx name="a" width="500" lsb="34"/>
     <mtx name="acute" width="500" lsb="204"/>
     <mtx name="acutecomb" width="0" lsb="-296"/>
+    <mtx name="ae" width="722" lsb="37"/>
     <mtx name="afii61289" width="417" lsb="7"/>
     <mtx name="aleph" width="611" lsb="55"/>
     <mtx name="ampersand" width="778" lsb="42"/>
@@ -519,6 +530,7 @@
     <mtx name="five" width="500" lsb="50"/>
     <mtx name="four" width="500" lsb="28"/>
     <mtx name="g" width="500" lsb="29"/>
+    <mtx name="germandbls" width="500" lsb="20"/>
     <mtx name="gradient" width="833" lsb="46"/>
     <mtx name="grave" width="500" lsb="106"/>
     <mtx name="gravecomb" width="0" lsb="-394"/>
@@ -550,7 +562,9 @@
     <mtx name="notequal" width="778" lsb="56"/>
     <mtx name="numbersign" width="833" lsb="56"/>
     <mtx name="o" width="500" lsb="28"/>
+    <mtx name="oe" width="778" lsb="29"/>
     <mtx name="one" width="500" lsb="83"/>
+    <mtx name="oslash" width="500" lsb="28"/>
     <mtx name="p" width="556" lsb="20"/>
     <mtx name="parenleft" width="389" lsb="94"/>
     <mtx name="parenright" width="389" lsb="55"/>
@@ -812,9 +826,16 @@
       <map code="0xb0" name="degree"/><!-- DEGREE SIGN -->
       <map code="0xb1" name="plusminus"/><!-- PLUS-MINUS SIGN -->
       <map code="0xb4" name="acute"/><!-- ACUTE ACCENT -->
+      <map code="0xc6" name="AE"/><!-- LATIN CAPITAL LETTER AE -->
       <map code="0xd7" name="multiply"/><!-- MULTIPLICATION SIGN -->
+      <map code="0xd8" name="Oslash"/><!-- LATIN CAPITAL LETTER O WITH STROKE -->
+      <map code="0xdf" name="germandbls"/><!-- LATIN SMALL LETTER SHARP S -->
+      <map code="0xe6" name="ae"/><!-- LATIN SMALL LETTER AE -->
       <map code="0xf7" name="divide"/><!-- DIVISION SIGN -->
+      <map code="0xf8" name="oslash"/><!-- LATIN SMALL LETTER O WITH STROKE -->
       <map code="0x131" name="dotlessi"/><!-- LATIN SMALL LETTER DOTLESS I -->
+      <map code="0x152" name="OE"/><!-- LATIN CAPITAL LIGATURE OE -->
+      <map code="0x153" name="oe"/><!-- LATIN SMALL LIGATURE OE -->
       <map code="0x237" name="uni0237"/><!-- LATIN SMALL LETTER DOTLESS J -->
       <map code="0x2c6" name="circumflex"/><!-- MODIFIER LETTER CIRCUMFLEX ACCENT -->
       <map code="0x2c7" name="caron"/><!-- CARON -->
@@ -1169,15 +1190,15 @@
       <map code="0xa4" name=".notdef"/>
       <map code="0xa5" name=".notdef"/>
       <map code="0xa6" name=".notdef"/>
-      <map code="0xa7" name=".notdef"/>
+      <map code="0xa7" name="germandbls"/>
       <map code="0xa8" name=".notdef"/>
       <map code="0xa9" name=".notdef"/>
       <map code="0xaa" name=".notdef"/>
       <map code="0xab" name="acute"/>
       <map code="0xac" name="dieresis"/>
       <map code="0xad" name="notequal"/>
-      <map code="0xae" name=".notdef"/>
-      <map code="0xaf" name=".notdef"/>
+      <map code="0xae" name="AE"/>
+      <map code="0xaf" name="Oslash"/>
       <map code="0xb0" name="infinity"/>
       <map code="0xb1" name="plusminus"/>
       <map code="0xb2" name="lessequal"/>
@@ -1192,8 +1213,8 @@
       <map code="0xbb" name=".notdef"/>
       <map code="0xbc" name=".notdef"/>
       <map code="0xbd" name="Omega"/>
-      <map code="0xbe" name=".notdef"/>
-      <map code="0xbf" name=".notdef"/>
+      <map code="0xbe" name="ae"/>
+      <map code="0xbf" name="oslash"/>
       <map code="0xc0" name=".notdef"/>
       <map code="0xc1" name=".notdef"/>
       <map code="0xc2" name="logicalnot"/>
@@ -1208,8 +1229,8 @@
       <map code="0xcb" name=".notdef"/>
       <map code="0xcc" name=".notdef"/>
       <map code="0xcd" name=".notdef"/>
-      <map code="0xce" name=".notdef"/>
-      <map code="0xcf" name=".notdef"/>
+      <map code="0xce" name="OE"/>
+      <map code="0xcf" name="oe"/>
       <map code="0xd0" name="endash"/>
       <map code="0xd1" name="emdash"/>
       <map code="0xd2" name="quotedblleft"/>
@@ -1362,9 +1383,16 @@
       <map code="0xb0" name="degree"/><!-- DEGREE SIGN -->
       <map code="0xb1" name="plusminus"/><!-- PLUS-MINUS SIGN -->
       <map code="0xb4" name="acute"/><!-- ACUTE ACCENT -->
+      <map code="0xc6" name="AE"/><!-- LATIN CAPITAL LETTER AE -->
       <map code="0xd7" name="multiply"/><!-- MULTIPLICATION SIGN -->
+      <map code="0xd8" name="Oslash"/><!-- LATIN CAPITAL LETTER O WITH STROKE -->
+      <map code="0xdf" name="germandbls"/><!-- LATIN SMALL LETTER SHARP S -->
+      <map code="0xe6" name="ae"/><!-- LATIN SMALL LETTER AE -->
       <map code="0xf7" name="divide"/><!-- DIVISION SIGN -->
+      <map code="0xf8" name="oslash"/><!-- LATIN SMALL LETTER O WITH STROKE -->
       <map code="0x131" name="dotlessi"/><!-- LATIN SMALL LETTER DOTLESS I -->
+      <map code="0x152" name="OE"/><!-- LATIN CAPITAL LIGATURE OE -->
+      <map code="0x153" name="oe"/><!-- LATIN SMALL LIGATURE OE -->
       <map code="0x237" name="uni0237"/><!-- LATIN SMALL LETTER DOTLESS J -->
       <map code="0x2c6" name="circumflex"/><!-- MODIFIER LETTER CIRCUMFLEX ACCENT -->
       <map code="0x2c7" name="caron"/><!-- CARON -->
@@ -4596,6 +4624,145 @@
         </assembly></instructions>
     </TTGlyph>
 
+    <TTGlyph name="AE" xMin="32" yMin="0" xMax="874" yMax="683">
+      <contour>
+        <pt x="256" y="0" on="1"/>
+        <pt x="238" y="3" on="0"/>
+        <pt x="140" y="3" on="1"/>
+        <pt x="51" y="3" on="0"/>
+        <pt x="39" y="0" on="1"/>
+        <pt x="32" y="0" on="1"/>
+        <pt x="32" y="46" on="1"/>
+        <pt x="40" y="46" on="1"/>
+        <pt x="113" y="46" on="0"/>
+        <pt x="138" y="84" on="1"/>
+        <pt x="148" y="104" on="0"/>
+        <pt x="331" y="637" on="1"/>
+        <pt x="258" y="637" on="1"/>
+        <pt x="258" y="683" on="1"/>
+        <pt x="819" y="683" on="1"/>
+        <pt x="819" y="679" on="1"/>
+        <pt x="819" y="678" on="0"/>
+        <pt x="847" y="448" on="0"/>
+        <pt x="847" y="447" on="1"/>
+        <pt x="847" y="443" on="1"/>
+        <pt x="807" y="443" on="1"/>
+        <pt x="802" y="487" on="0"/>
+        <pt x="791" y="541" on="0"/>
+        <pt x="772" y="589" on="0"/>
+        <pt x="746" y="613" on="0"/>
+        <pt x="703" y="631" on="0"/>
+        <pt x="649" y="637" on="0"/>
+        <pt x="608" y="637" on="1"/>
+        <pt x="535" y="637" on="0"/>
+        <pt x="527" y="635" on="1"/>
+        <pt x="518" y="634" on="0"/>
+        <pt x="515" y="624" on="1"/>
+        <pt x="514" y="622" on="0"/>
+        <pt x="514" y="486" on="1"/>
+        <pt x="514" y="351" on="1"/>
+        <pt x="554" y="351" on="1"/>
+        <pt x="628" y="351" on="0"/>
+        <pt x="676" y="383" on="0"/>
+        <pt x="679" y="447" on="1"/>
+        <pt x="679" y="468" on="1"/>
+        <pt x="719" y="468" on="1"/>
+        <pt x="719" y="188" on="1"/>
+        <pt x="679" y="188" on="1"/>
+        <pt x="679" y="209" on="1"/>
+        <pt x="676" y="273" on="0"/>
+        <pt x="628" y="305" on="0"/>
+        <pt x="554" y="305" on="1"/>
+        <pt x="514" y="305" on="1"/>
+        <pt x="514" y="184" on="1"/>
+        <pt x="514" y="61" on="0"/>
+        <pt x="515" y="59" on="1"/>
+        <pt x="518" y="49" on="0"/>
+        <pt x="527" y="48" on="1"/>
+        <pt x="535" y="46" on="0"/>
+        <pt x="610" y="46" on="1"/>
+        <pt x="673" y="46" on="0"/>
+        <pt x="746" y="61" on="0"/>
+        <pt x="795" y="109" on="0"/>
+        <pt x="819" y="178" on="0"/>
+        <pt x="829" y="242" on="1"/>
+        <pt x="833" y="268" on="0"/>
+        <pt x="834" y="270" on="1"/>
+        <pt x="834" y="273" on="1"/>
+        <pt x="874" y="273" on="1"/>
+        <pt x="874" y="270" on="1"/>
+        <pt x="872" y="267" on="0"/>
+        <pt x="833" y="6" on="0"/>
+        <pt x="832" y="3" on="1"/>
+        <pt x="832" y="0" on="1"/>
+        <pt x="339" y="0" on="1"/>
+        <pt x="339" y="46" on="1"/>
+        <pt x="355" y="46" on="1"/>
+        <pt x="382" y="46" on="0"/>
+        <pt x="403" y="49" on="1"/>
+        <pt x="411" y="52" on="0"/>
+        <pt x="415" y="60" on="1"/>
+        <pt x="416" y="62" on="0"/>
+        <pt x="416" y="184" on="1"/>
+        <pt x="416" y="305" on="1"/>
+        <pt x="265" y="305" on="1"/>
+        <pt x="228" y="199" on="1"/>
+        <pt x="219" y="174" on="0"/>
+        <pt x="200" y="119" on="0"/>
+        <pt x="195" y="104" on="1"/>
+        <pt x="190" y="90" on="1"/>
+        <pt x="187" y="72" on="0"/>
+        <pt x="234" y="46" on="0"/>
+        <pt x="259" y="46" on="1"/>
+        <pt x="264" y="46" on="1"/>
+        <pt x="264" y="0" on="1"/>
+      </contour>
+      <contour>
+        <pt x="416" y="620" on="1"/>
+        <pt x="407" y="634" on="0"/>
+        <pt x="384" y="634" on="1"/>
+        <pt x="379" y="635" on="1"/>
+        <pt x="378" y="630" on="0"/>
+        <pt x="329" y="490" on="0"/>
+        <pt x="281" y="354" on="0"/>
+        <pt x="281" y="353" on="1"/>
+        <pt x="281" y="351" on="0"/>
+        <pt x="348" y="351" on="1"/>
+        <pt x="416" y="351" on="1"/>
+      </contour>
+      <instructions><assembly>
+          NPUSHB[ ]	/* 19 values pushed */
+          90 31 2 6 2 63 1 7 8 75 1 1 7 3 74 4 1 0 71
+          MPPEM[ ]	/* MeasurePixelPerEm */
+          PUSHB[ ]	/* 1 value pushed */
+          35
+          LT[ ]	/* LessThan */
+          IF[ ]	/* If */
+          NPUSHB[ ]	/* 45 values pushed */
+          15 1 5 12 1 8 7 5 8 99 0 6 0 7 1 6 7 97 14 4 2 2 2 3 89
+          0 3 3 13 75 13 11 9 3 1 1 0 91 10 1 0 0 14 0 76
+          ELSE[ ]	/* Else */
+          MPPEM[ ]	/* MeasurePixelPerEm */
+          PUSHB[ ]	/* 1 value pushed */
+          46
+          LT[ ]	/* LessThan */
+          IF[ ]	/* If */
+          NPUSHB[ ]	/* 45 values pushed */
+          15 1 5 12 1 8 7 5 8 99 0 6 0 7 1 6 7 97 14 4 2 2 2 3 89
+          0 3 3 15 75 13 11 9 3 1 1 0 91 10 1 0 0 17 0 76
+          ELSE[ ]	/* Else */
+          NPUSHB[ ]	/* 43 values pushed */
+          0 3 14 4 2 2 6 3 2 99 15 1 5 12 1 8 7 5 8 99 0 6 0 7 1
+          6 7 97 13 11 9 3 1 1 0 91 10 1 0 0 17 0 76
+          EIF[ ]	/* EndIf */
+          EIF[ ]	/* EndIf */
+          NPUSHB[ ]	/* 26 values pushed */
+          100 96 92 91 87 86 79 78 72 70 69 66 55 53 35 17 19 38 44 17 19 35 33 16 6
+          29
+          CALL[ ]	/* CallFunction */
+        </assembly></instructions>
+    </TTGlyph>
+
     <TTGlyph name="B" xMin="28" yMin="0" xMax="651" yMax="683">
       <contour>
         <pt x="131" y="622" on="1"/>
@@ -6323,6 +6490,171 @@
         </assembly></instructions>
     </TTGlyph>
 
+    <TTGlyph name="OE" xMin="70" yMin="-22" xMax="985" yMax="704">
+      <contour>
+        <pt x="985" y="270" on="1"/>
+        <pt x="984" y="267" on="0"/>
+        <pt x="944" y="6" on="0"/>
+        <pt x="943" y="3" on="1"/>
+        <pt x="943" y="0" on="1"/>
+        <pt x="740" y="0" on="1"/>
+        <pt x="535" y="-1" on="0"/>
+        <pt x="526" y="-2" on="1"/>
+        <pt x="515" y="-4" on="0"/>
+        <pt x="481" y="-11" on="1"/>
+        <pt x="428" y="-22" on="0"/>
+        <pt x="402" y="-22" on="1"/>
+        <pt x="299" y="-22" on="0"/>
+        <pt x="213" y="42" on="1"/>
+        <pt x="90" y="135" on="0"/>
+        <pt x="71" y="299" on="1"/>
+        <pt x="70" y="308" on="0"/>
+        <pt x="70" y="374" on="0"/>
+        <pt x="71" y="383" on="1"/>
+        <pt x="85" y="495" on="0"/>
+        <pt x="152" y="581" on="1"/>
+        <pt x="183" y="617" on="0"/>
+        <pt x="205" y="633" on="1"/>
+        <pt x="280" y="695" on="0"/>
+        <pt x="376" y="704" on="1"/>
+        <pt x="392" y="704" on="1"/>
+        <pt x="434" y="704" on="0"/>
+        <pt x="481" y="694" on="1"/>
+        <pt x="515" y="687" on="0"/>
+        <pt x="526" y="685" on="1"/>
+        <pt x="535" y="684" on="0"/>
+        <pt x="733" y="683" on="1"/>
+        <pt x="930" y="683" on="1"/>
+        <pt x="930" y="679" on="1"/>
+        <pt x="930" y="678" on="0"/>
+        <pt x="958" y="448" on="0"/>
+        <pt x="958" y="447" on="1"/>
+        <pt x="958" y="443" on="1"/>
+        <pt x="918" y="443" on="1"/>
+        <pt x="918" y="447" on="1"/>
+        <pt x="918" y="448" on="0"/>
+        <pt x="916" y="455" on="0"/>
+        <pt x="915" y="467" on="0"/>
+        <pt x="914" y="471" on="1"/>
+        <pt x="903" y="569" on="0"/>
+        <pt x="870" y="600" on="1"/>
+        <pt x="846" y="624" on="0"/>
+        <pt x="784" y="636" on="0"/>
+        <pt x="721" y="636" on="1"/>
+        <pt x="697" y="636" on="1"/>
+        <pt x="623" y="636" on="0"/>
+        <pt x="619" y="635" on="1"/>
+        <pt x="609" y="634" on="0"/>
+        <pt x="606" y="624" on="1"/>
+        <pt x="605" y="622" on="0"/>
+        <pt x="605" y="499" on="1"/>
+        <pt x="605" y="378" on="1"/>
+        <pt x="665" y="378" on="1"/>
+        <pt x="732" y="380" on="0"/>
+        <pt x="733" y="380" on="1"/>
+        <pt x="772" y="385" on="0"/>
+        <pt x="802" y="426" on="0"/>
+        <pt x="804" y="475" on="1"/>
+        <pt x="804" y="495" on="1"/>
+        <pt x="844" y="495" on="1"/>
+        <pt x="844" y="215" on="1"/>
+        <pt x="804" y="215" on="1"/>
+        <pt x="804" y="235" on="1"/>
+        <pt x="802" y="284" on="0"/>
+        <pt x="773" y="325" on="0"/>
+        <pt x="733" y="330" on="1"/>
+        <pt x="732" y="330" on="0"/>
+        <pt x="665" y="332" on="1"/>
+        <pt x="605" y="332" on="1"/>
+        <pt x="605" y="197" on="1"/>
+        <pt x="605" y="61" on="0"/>
+        <pt x="606" y="59" on="1"/>
+        <pt x="609" y="49" on="0"/>
+        <pt x="619" y="48" on="1"/>
+        <pt x="627" y="46" on="0"/>
+        <pt x="697" y="46" on="1"/>
+        <pt x="778" y="46" on="0"/>
+        <pt x="853" y="60" on="0"/>
+        <pt x="884" y="88" on="1"/>
+        <pt x="921" y="123" on="0"/>
+        <pt x="941" y="251" on="1"/>
+        <pt x="942" y="254" on="0"/>
+        <pt x="943" y="263" on="0"/>
+        <pt x="945" y="269" on="0"/>
+        <pt x="945" y="270" on="1"/>
+        <pt x="945" y="273" on="1"/>
+        <pt x="985" y="273" on="1"/>
+      </contour>
+      <contour>
+        <pt x="478" y="648" on="1"/>
+        <pt x="457" y="668" on="0"/>
+        <pt x="403" y="668" on="1"/>
+        <pt x="399" y="668" on="0"/>
+        <pt x="386" y="667" on="0"/>
+        <pt x="384" y="667" on="1"/>
+        <pt x="299" y="656" on="0"/>
+        <pt x="184" y="476" on="0"/>
+        <pt x="184" y="353" on="1"/>
+        <pt x="184" y="237" on="0"/>
+        <pt x="281" y="49" on="0"/>
+        <pt x="355" y="23" on="1"/>
+        <pt x="381" y="15" on="0"/>
+        <pt x="406" y="15" on="1"/>
+        <pt x="455" y="15" on="0"/>
+        <pt x="478" y="35" on="1"/>
+        <pt x="503" y="54" on="0"/>
+        <pt x="511" y="128" on="1"/>
+        <pt x="514" y="161" on="0"/>
+        <pt x="514" y="342" on="1"/>
+        <pt x="514" y="522" on="0"/>
+        <pt x="511" y="556" on="1"/>
+        <pt x="503" y="629" on="0"/>
+      </contour>
+      <instructions><assembly>
+          PUSHB[ ]	/* 6 values pushed */
+          53 1 6 4 1 74
+          MPPEM[ ]	/* MeasurePixelPerEm */
+          PUSHB[ ]	/* 1 value pushed */
+          35
+          LT[ ]	/* LessThan */
+          IF[ ]	/* If */
+          NPUSHB[ ]	/* 57 values pushed */
+          0 5 0 8 7 5 8 97 0 6 0 7 9 6 7 97 0 10 10 2 91 0 2 2 21
+          75 0 4 4 3 91 0 3 3 13 75 0 9 9 0 91 0 0 0 14 75 0 11 11 1
+          91 0 1 1 22 1 76
+          ELSE[ ]	/* Else */
+          MPPEM[ ]	/* MeasurePixelPerEm */
+          PUSHB[ ]	/* 1 value pushed */
+          46
+          LT[ ]	/* LessThan */
+          IF[ ]	/* If */
+          NPUSHB[ ]	/* 57 values pushed */
+          0 5 0 8 7 5 8 97 0 6 0 7 9 6 7 97 0 10 10 2 91 0 2 2 15
+          75 0 4 4 3 91 0 3 3 15 75 0 9 9 0 91 0 0 0 17 75 0 11 11 1
+          91 0 1 1 25 1 76
+          ELSE[ ]	/* Else */
+          MPPEM[ ]	/* MeasurePixelPerEm */
+          PUSHB[ ]	/* 1 value pushed */
+          50
+          LT[ ]	/* LessThan */
+          IF[ ]	/* If */
+          NPUSHB[ ]	/* 52 values pushed */
+          0 3 0 4 6 3 4 99 0 5 0 8 7 5 8 97 0 6 0 7 9 6 7 97 0
+          11 0 1 11 1 95 0 10 10 2 91 0 2 2 15 75 0 9 9 0 91 0 0 0 17
+          0 76
+          ELSE[ ]	/* Else */
+          NPUSHB[ ]	/* 50 values pushed */
+          0 2 0 10 4 2 10 99 0 3 0 4 6 3 4 99 0 5 0 8 7 5 8 97 0
+          6 0 7 9 6 7 97 0 11 0 1 11 1 95 0 9 9 0 91 0 0 0 17 0 76
+          EIF[ ]	/* EndIf */
+          EIF[ ]	/* EndIf */
+          EIF[ ]	/* EndIf */
+          NPUSHB[ ]	/* 18 values pushed */
+          106 104 96 93 81 79 52 17 21 38 63 36 44 36 66 12 6 29
+          CALL[ ]	/* CallFunction */
+        </assembly></instructions>
+    </TTGlyph>
+
     <TTGlyph name="Omega" xMin="44" yMin="0" xMax="677" yMax="704">
       <contour>
         <pt x="270" y="20" on="1"/>
@@ -6426,6 +6758,118 @@
       <instructions><assembly>
           PUSHB[ ]	/* 4 values pushed */
           34 2 1 48
+          CALL[ ]	/* CallFunction */
+        </assembly></instructions>
+    </TTGlyph>
+
+    <TTGlyph name="Oslash" xMin="56" yMin="-59" xMax="721" yMax="742">
+      <contour>
+        <pt x="560" y="653" on="1"/>
+        <pt x="616" y="742" on="1"/>
+        <pt x="624" y="737" on="1"/>
+        <pt x="632" y="732" on="0"/>
+        <pt x="649" y="722" on="0"/>
+        <pt x="650" y="722" on="1"/>
+        <pt x="646" y="716" on="1"/>
+        <pt x="643" y="710" on="0"/>
+        <pt x="627" y="685" on="0"/>
+        <pt x="621" y="675" on="1"/>
+        <pt x="592" y="629" on="1"/>
+        <pt x="593" y="628" on="0"/>
+        <pt x="615" y="608" on="1"/>
+        <pt x="694" y="526" on="0"/>
+        <pt x="715" y="411" on="1"/>
+        <pt x="721" y="380" on="0"/>
+        <pt x="721" y="340" on="1"/>
+        <pt x="721" y="298" on="0"/>
+        <pt x="716" y="273" on="1"/>
+        <pt x="697" y="160" on="0"/>
+        <pt x="544" y="-1" on="0"/>
+        <pt x="438" y="-18" on="1"/>
+        <pt x="417" y="-22" on="0"/>
+        <pt x="389" y="-22" on="1"/>
+        <pt x="301" y="-22" on="0"/>
+        <pt x="224" y="25" on="1"/>
+        <pt x="217" y="29" on="1"/>
+        <pt x="161" y="-59" on="0"/>
+        <pt x="160" y="-59" on="1"/>
+        <pt x="128" y="-38" on="1"/>
+        <pt x="128" y="-37" on="0"/>
+        <pt x="156" y="8" on="1"/>
+        <pt x="184" y="53" on="1"/>
+        <pt x="175" y="62" on="1"/>
+        <pt x="74" y="154" on="0"/>
+        <pt x="57" y="299" on="1"/>
+        <pt x="56" y="308" on="0"/>
+        <pt x="56" y="374" on="0"/>
+        <pt x="57" y="383" on="1"/>
+        <pt x="71" y="495" on="0"/>
+        <pt x="138" y="581" on="1"/>
+        <pt x="169" y="617" on="0"/>
+        <pt x="191" y="633" on="1"/>
+        <pt x="281" y="705" on="0"/>
+        <pt x="389" y="705" on="1"/>
+        <pt x="453" y="705" on="0"/>
+        <pt x="513" y="678" on="1"/>
+        <pt x="521" y="674" on="0"/>
+      </contour>
+      <contour>
+        <pt x="505" y="632" on="1"/>
+        <pt x="454" y="668" on="0"/>
+        <pt x="387" y="668" on="1"/>
+        <pt x="289" y="668" on="0"/>
+        <pt x="225" y="591" on="1"/>
+        <pt x="159" y="510" on="0"/>
+        <pt x="159" y="341" on="1"/>
+        <pt x="159" y="256" on="0"/>
+        <pt x="185" y="148" on="0"/>
+        <pt x="216" y="103" on="1"/>
+        <pt x="374" y="356" on="1"/>
+        <pt x="533" y="610" on="1"/>
+        <pt x="533" y="613" on="0"/>
+      </contour>
+      <contour>
+        <pt x="618" y="180" on="0"/>
+        <pt x="618" y="492" on="0"/>
+        <pt x="568" y="568" on="1"/>
+        <pt x="561" y="579" on="1"/>
+        <pt x="560" y="579" on="0"/>
+        <pt x="244" y="74" on="0"/>
+        <pt x="244" y="73" on="1"/>
+        <pt x="244" y="70" on="0"/>
+        <pt x="276" y="47" on="0"/>
+        <pt x="289" y="40" on="1"/>
+        <pt x="335" y="15" on="0"/>
+        <pt x="388" y="15" on="1"/>
+        <pt x="439" y="15" on="0"/>
+        <pt x="532" y="64" on="0"/>
+        <pt x="560" y="101" on="1"/>
+      </contour>
+      <instructions><assembly>
+          NPUSHB[ ]	/* 19 values pushed */
+          64 59 57 32 26 10 6 3 2 1 74 1 1 1 72 29 1 0 71
+          MPPEM[ ]	/* MeasurePixelPerEm */
+          PUSHB[ ]	/* 1 value pushed */
+          35
+          LT[ ]	/* LessThan */
+          IF[ ]	/* If */
+          NPUSHB[ ]	/* 21 values pushed */
+          0 2 2 1 91 0 1 1 21 75 0 3 3 0 91 0 0 0 22 0 76
+          ELSE[ ]	/* Else */
+          MPPEM[ ]	/* MeasurePixelPerEm */
+          PUSHB[ ]	/* 1 value pushed */
+          46
+          LT[ ]	/* LessThan */
+          IF[ ]	/* If */
+          NPUSHB[ ]	/* 21 values pushed */
+          0 2 2 1 91 0 1 1 15 75 0 3 3 0 91 0 0 0 25 0 76
+          ELSE[ ]	/* Else */
+          NPUSHB[ ]	/* 24 values pushed */
+          0 1 0 2 3 1 2 99 0 3 0 0 3 87 0 3 3 0 91 0 0 3 0 79
+          EIF[ ]	/* EndIf */
+          EIF[ ]	/* EndIf */
+          NPUSHB[ ]	/* 11 values pushed */
+          73 71 51 49 45 43 24 22 4 6 20
           CALL[ ]	/* CallFunction */
         </assembly></instructions>
     </TTGlyph>
@@ -8580,6 +9024,151 @@
           EIF[ ]	/* EndIf */
           NPUSHB[ ]	/* 9 values pushed */
           1 0 0 16 1 16 2 6 20
+          CALL[ ]	/* CallFunction */
+        </assembly></instructions>
+    </TTGlyph>
+
+    <TTGlyph name="ae" xMin="37" yMin="-11" xMax="693" yMax="448">
+      <contour>
+        <pt x="139" y="305" on="0"/>
+        <pt x="93" y="305" on="0"/>
+        <pt x="63" y="337" on="0"/>
+        <pt x="63" y="359" on="1"/>
+        <pt x="63" y="373" on="0"/>
+        <pt x="71" y="391" on="1"/>
+        <pt x="83" y="416" on="0"/>
+        <pt x="156" y="447" on="0"/>
+        <pt x="208" y="447" on="1"/>
+        <pt x="239" y="447" on="0"/>
+        <pt x="259" y="445" on="1"/>
+        <pt x="334" y="432" on="0"/>
+        <pt x="377" y="379" on="1"/>
+        <pt x="401" y="408" on="0"/>
+        <pt x="478" y="448" on="0"/>
+        <pt x="522" y="448" on="1"/>
+        <pt x="601" y="448" on="0"/>
+        <pt x="692" y="340" on="0"/>
+        <pt x="692" y="255" on="1"/>
+        <pt x="693" y="237" on="1"/>
+        <pt x="690" y="235" on="0"/>
+        <pt x="686" y="231" on="1"/>
+        <pt x="403" y="231" on="1"/>
+        <pt x="403" y="219" on="1"/>
+        <pt x="403" y="82" on="0"/>
+        <pt x="496" y="41" on="1"/>
+        <pt x="527" y="29" on="0"/>
+        <pt x="555" y="29" on="1"/>
+        <pt x="587" y="29" on="0"/>
+        <pt x="639" y="75" on="0"/>
+        <pt x="651" y="114" on="1"/>
+        <pt x="653" y="124" on="0"/>
+        <pt x="657" y="128" on="1"/>
+        <pt x="660" y="131" on="0"/>
+        <pt x="686" y="131" on="0"/>
+        <pt x="689" y="128" on="1"/>
+        <pt x="695" y="123" on="0"/>
+        <pt x="689" y="106" on="1"/>
+        <pt x="677" y="67" on="0"/>
+        <pt x="620" y="9" on="0"/>
+        <pt x="584" y="-3" on="1"/>
+        <pt x="558" y="-11" on="0"/>
+        <pt x="534" y="-11" on="1"/>
+        <pt x="443" y="-11" on="0"/>
+        <pt x="379" y="60" on="1"/>
+        <pt x="372" y="68" on="1"/>
+        <pt x="346" y="32" on="0"/>
+        <pt x="250" y="-11" on="0"/>
+        <pt x="191" y="-11" on="1"/>
+        <pt x="106" y="-11" on="0"/>
+        <pt x="61" y="39" on="1"/>
+        <pt x="37" y="67" on="0"/>
+        <pt x="37" y="104" on="1"/>
+        <pt x="37" y="162" on="0"/>
+        <pt x="96" y="203" on="1"/>
+        <pt x="157" y="245" on="0"/>
+        <pt x="264" y="254" on="1"/>
+        <pt x="288" y="258" on="0"/>
+        <pt x="318" y="258" on="1"/>
+        <pt x="319" y="258" on="0"/>
+        <pt x="319" y="279" on="1"/>
+        <pt x="319" y="314" on="0"/>
+        <pt x="318" y="322" on="1"/>
+        <pt x="313" y="354" on="0"/>
+        <pt x="273" y="401" on="0"/>
+        <pt x="244" y="408" on="1"/>
+        <pt x="237" y="410" on="0"/>
+        <pt x="214" y="410" on="1"/>
+        <pt x="187" y="410" on="0"/>
+        <pt x="181" y="409" on="1"/>
+        <pt x="176" y="409" on="0"/>
+        <pt x="160" y="406" on="0"/>
+        <pt x="154" y="405" on="1"/>
+        <pt x="148" y="404" on="1"/>
+        <pt x="149" y="403" on="1"/>
+        <pt x="150" y="402" on="0"/>
+        <pt x="153" y="399" on="0"/>
+        <pt x="154" y="397" on="1"/>
+        <pt x="170" y="382" on="0"/>
+        <pt x="170" y="359" on="1"/>
+        <pt x="170" y="337" on="0"/>
+      </contour>
+      <contour>
+        <pt x="570" y="391" on="1"/>
+        <pt x="548" y="411" on="0"/>
+        <pt x="518" y="411" on="1"/>
+        <pt x="480" y="411" on="0"/>
+        <pt x="446" y="377" on="1"/>
+        <pt x="414" y="342" on="0"/>
+        <pt x="407" y="282" on="1"/>
+        <pt x="405" y="270" on="0"/>
+        <pt x="405" y="269" on="1"/>
+        <pt x="405" y="267" on="0"/>
+        <pt x="508" y="267" on="1"/>
+        <pt x="611" y="267" on="1"/>
+        <pt x="611" y="273" on="1"/>
+        <pt x="611" y="306" on="0"/>
+        <pt x="587" y="374" on="0"/>
+      </contour>
+      <contour>
+        <pt x="331" y="133" on="1"/>
+        <pt x="331" y="141" on="0"/>
+        <pt x="322" y="178" on="0"/>
+        <pt x="321" y="184" on="1"/>
+        <pt x="321" y="194" on="0"/>
+        <pt x="319" y="208" on="1"/>
+        <pt x="319" y="222" on="1"/>
+        <pt x="308" y="221" on="1"/>
+        <pt x="245" y="217" on="0"/>
+        <pt x="147" y="170" on="0"/>
+        <pt x="133" y="130" on="1"/>
+        <pt x="129" y="119" on="0"/>
+        <pt x="129" y="105" on="1"/>
+        <pt x="129" y="74" on="0"/>
+        <pt x="173" y="26" on="0"/>
+        <pt x="207" y="26" on="1"/>
+        <pt x="259" y="26" on="0"/>
+        <pt x="331" y="87" on="0"/>
+      </contour>
+      <instructions><assembly>
+          NPUSHB[ ]	/* 24 values pushed */
+          73 12 2 0 9 19 1 3 8 102 1 12 3 101 96 2 5 12 45 1 4 5 5 74
+          MPPEM[ ]	/* MeasurePixelPerEm */
+          PUSHB[ ]	/* 1 value pushed */
+          44
+          LT[ ]	/* LessThan */
+          IF[ ]	/* If */
+          NPUSHB[ ]	/* 57 values pushed */
+          0 0 9 11 9 0 11 112 0 5 12 4 12 5 4 112 0 11 0 3 12 11 3 97 0
+          8 0 12 5 8 12 99 10 1 9 9 1 91 2 1 1 1 24 75 13 1 4 4 6 91
+          7 1 6 6 25 6 76
+          ELSE[ ]	/* Else */
+          NPUSHB[ ]	/* 55 values pushed */
+          0 0 9 11 9 0 11 112 0 5 12 4 12 5 4 112 2 1 1 10 1 9 0 1 9
+          99 0 11 0 3 12 11 3 97 0 8 0 12 5 8 12 99 13 1 4 4 6 91 7 1
+          6 6 25 6 76
+          EIF[ ]	/* EndIf */
+          NPUSHB[ ]	/* 22 values pushed */
+          112 110 104 103 92 88 84 82 68 66 24 36 39 21 36 21 37 38 16 14 6 29
           CALL[ ]	/* CallFunction */
         </assembly></instructions>
     </TTGlyph>
@@ -13149,6 +13738,158 @@
         </assembly></instructions>
     </TTGlyph>
 
+    <TTGlyph name="germandbls" xMin="20" yMin="-11" xMax="471" yMax="705">
+      <contour>
+        <pt x="131" y="3" on="1"/>
+        <pt x="40" y="3" on="0"/>
+        <pt x="28" y="0" on="1"/>
+        <pt x="20" y="0" on="1"/>
+        <pt x="20" y="46" on="1"/>
+        <pt x="36" y="46" on="1"/>
+        <pt x="64" y="46" on="0"/>
+        <pt x="85" y="49" on="1"/>
+        <pt x="93" y="52" on="0"/>
+        <pt x="97" y="60" on="1"/>
+        <pt x="98" y="62" on="0"/>
+        <pt x="98" y="224" on="1"/>
+        <pt x="98" y="385" on="1"/>
+        <pt x="20" y="385" on="1"/>
+        <pt x="20" y="431" on="1"/>
+        <pt x="98" y="431" on="1"/>
+        <pt x="98" y="504" on="1"/>
+        <pt x="99" y="582" on="0"/>
+        <pt x="103" y="593" on="1"/>
+        <pt x="103" y="594" on="0"/>
+        <pt x="105" y="599" on="1"/>
+        <pt x="118" y="646" on="0"/>
+        <pt x="210" y="705" on="0"/>
+        <pt x="268" y="705" on="1"/>
+        <pt x="325" y="705" on="0"/>
+        <pt x="412" y="654" on="0"/>
+        <pt x="432" y="613" on="1"/>
+        <pt x="443" y="587" on="0"/>
+        <pt x="443" y="558" on="1"/>
+        <pt x="443" y="506" on="0"/>
+        <pt x="378" y="429" on="0"/>
+        <pt x="332" y="411" on="1"/>
+        <pt x="341" y="406" on="1"/>
+        <pt x="398" y="374" on="0"/>
+        <pt x="471" y="253" on="0"/>
+        <pt x="471" y="174" on="1"/>
+        <pt x="471" y="98" on="0"/>
+        <pt x="373" y="-7" on="0"/>
+        <pt x="302" y="-11" on="1"/>
+        <pt x="236" y="-11" on="0"/>
+        <pt x="214" y="42" on="1"/>
+        <pt x="208" y="57" on="0"/>
+        <pt x="208" y="71" on="1"/>
+        <pt x="208" y="91" on="0"/>
+        <pt x="233" y="117" on="0"/>
+        <pt x="252" y="117" on="1"/>
+        <pt x="270" y="117" on="0"/>
+        <pt x="295" y="93" on="0"/>
+        <pt x="295" y="74" on="1"/>
+        <pt x="295" y="47" on="0"/>
+        <pt x="274" y="36" on="1"/>
+        <pt x="270" y="34" on="0"/>
+        <pt x="271" y="32" on="1"/>
+        <pt x="280" y="26" on="0"/>
+        <pt x="298" y="26" on="1"/>
+        <pt x="305" y="26" on="0"/>
+        <pt x="308" y="27" on="1"/>
+        <pt x="331" y="32" on="0"/>
+        <pt x="368" y="76" on="0"/>
+        <pt x="375" y="107" on="1"/>
+        <pt x="381" y="133" on="0"/>
+        <pt x="381" y="174" on="1"/>
+        <pt x="381" y="300" on="0"/>
+        <pt x="322" y="358" on="1"/>
+        <pt x="289" y="391" on="0"/>
+        <pt x="249" y="394" on="1"/>
+        <pt x="240" y="394" on="0"/>
+        <pt x="234" y="400" on="0"/>
+        <pt x="234" y="411" on="1"/>
+        <pt x="234" y="424" on="0"/>
+        <pt x="239" y="430" on="0"/>
+        <pt x="251" y="431" on="1"/>
+        <pt x="299" y="434" on="0"/>
+        <pt x="354" y="502" on="0"/>
+        <pt x="354" y="558" on="1"/>
+        <pt x="354" y="641" on="0"/>
+        <pt x="299" y="663" on="1"/>
+        <pt x="284" y="668" on="0"/>
+        <pt x="270" y="668" on="1"/>
+        <pt x="233" y="668" on="0"/>
+        <pt x="188" y="625" on="0"/>
+        <pt x="181" y="590" on="1"/>
+        <pt x="180" y="583" on="0"/>
+        <pt x="179" y="291" on="1"/>
+        <pt x="179" y="0" on="1"/>
+        <pt x="176" y="0" on="1"/>
+        <pt x="173" y="0" on="1"/>
+        <pt x="170" y="1" on="0"/>
+        <pt x="159" y="2" on="0"/>
+        <pt x="153" y="2" on="0"/>
+        <pt x="136" y="3" on="0"/>
+      </contour>
+      <instructions><assembly>
+          NPUSHB[ ]	/* 23 values pushed */
+          81 1 3 10 31 1 8 3 9 1 1 6 50 1 7 1 84 2 2 5 0 5 74
+          MPPEM[ ]	/* MeasurePixelPerEm */
+          PUSHB[ ]	/* 1 value pushed */
+          14
+          LT[ ]	/* LessThan */
+          IF[ ]	/* If */
+          NPUSHB[ ]	/* 58 values pushed */
+          0 8 3 2 3 8 2 112 0 6 2 1 7 6 104 0 10 10 4 91 0 4 4 21 75
+          0 2 2 3 91 9 1 3 3 16 75 0 1 1 0 91 11 1 0 0 14 75 0 7 7
+          5 92 0 5 5 25 5 76
+          ELSE[ ]	/* Else */
+          MPPEM[ ]	/* MeasurePixelPerEm */
+          PUSHB[ ]	/* 1 value pushed */
+          35
+          LT[ ]	/* LessThan */
+          IF[ ]	/* If */
+          NPUSHB[ ]	/* 59 values pushed */
+          0 8 3 2 3 8 2 112 0 6 2 1 2 6 1 112 0 10 10 4 91 0 4 4 21
+          75 0 2 2 3 91 9 1 3 3 16 75 0 1 1 0 91 11 1 0 0 14 75 0 7
+          7 5 92 0 5 5 25 5 76
+          ELSE[ ]	/* Else */
+          MPPEM[ ]	/* MeasurePixelPerEm */
+          PUSHB[ ]	/* 1 value pushed */
+          44
+          LT[ ]	/* LessThan */
+          IF[ ]	/* If */
+          NPUSHB[ ]	/* 59 values pushed */
+          0 8 3 2 3 8 2 112 0 6 2 1 2 6 1 112 0 10 10 4 91 0 4 4 15
+          75 0 2 2 3 91 9 1 3 3 16 75 0 1 1 0 91 11 1 0 0 17 75 0 7
+          7 5 92 0 5 5 25 5 76
+          ELSE[ ]	/* Else */
+          MPPEM[ ]	/* MeasurePixelPerEm */
+          PUSHB[ ]	/* 1 value pushed */
+          46
+          LT[ ]	/* LessThan */
+          IF[ ]	/* If */
+          NPUSHB[ ]	/* 57 values pushed */
+          0 8 3 2 3 8 2 112 0 6 2 1 2 6 1 112 9 1 3 0 2 6 3 2 97
+          0 10 10 4 91 0 4 4 15 75 0 1 1 0 91 11 1 0 0 17 75 0 7 7 5
+          92 0 5 5 25 5 76
+          ELSE[ ]	/* Else */
+          NPUSHB[ ]	/* 55 values pushed */
+          0 8 3 2 3 8 2 112 0 6 2 1 2 6 1 112 0 4 0 10 3 4 10 99 9
+          1 3 0 2 6 3 2 97 0 1 1 0 91 11 1 0 0 17 75 0 7 7 5 92 0
+          5 5 25 5 76
+          EIF[ ]	/* EndIf */
+          EIF[ ]	/* EndIf */
+          EIF[ ]	/* EndIf */
+          EIF[ ]	/* EndIf */
+          NPUSHB[ ]	/* 29 values pushed */
+          1 0 79 77 72 71 66 65 54 53 46 44 39 37 24 22 15 14 13 12 6 4 0 90 1
+          88 12 6 20
+          CALL[ ]	/* CallFunction */
+        </assembly></instructions>
+    </TTGlyph>
+
     <TTGlyph name="gradient" xMin="46" yMin="-33" xMax="786" yMax="683">
       <contour>
         <pt x="46" y="676" on="1"/>
@@ -15190,6 +15931,118 @@
         </assembly></instructions>
     </TTGlyph>
 
+    <TTGlyph name="oe" xMin="29" yMin="-11" xMax="749" yMax="448">
+      <contour>
+        <pt x="749" y="246" on="1"/>
+        <pt x="749" y="238" on="0"/>
+        <pt x="742" y="231" on="1"/>
+        <pt x="458" y="231" on="1"/>
+        <pt x="458" y="219" on="1"/>
+        <pt x="458" y="58" on="0"/>
+        <pt x="582" y="32" on="1"/>
+        <pt x="590" y="30" on="0"/>
+        <pt x="608" y="30" on="1"/>
+        <pt x="681" y="30" on="0"/>
+        <pt x="706" y="114" on="1"/>
+        <pt x="710" y="125" on="0"/>
+        <pt x="716" y="131" on="0"/>
+        <pt x="742" y="131" on="0"/>
+        <pt x="745" y="128" on="1"/>
+        <pt x="751" y="123" on="0"/>
+        <pt x="746" y="106" on="1"/>
+        <pt x="729" y="55" on="0"/>
+        <pt x="649" y="-10" on="0"/>
+        <pt x="590" y="-10" on="1"/>
+        <pt x="563" y="-10" on="0"/>
+        <pt x="540" y="-4" on="1"/>
+        <pt x="460" y="15" on="0"/>
+        <pt x="416" y="82" on="1"/>
+        <pt x="410" y="73" on="1"/>
+        <pt x="345" y="-11" on="0"/>
+        <pt x="245" y="-11" on="1"/>
+        <pt x="183" y="-11" on="0"/>
+        <pt x="130" y="24" on="1"/>
+        <pt x="47" y="79" on="0"/>
+        <pt x="30" y="185" on="1"/>
+        <pt x="29" y="193" on="0"/>
+        <pt x="29" y="217" on="1"/>
+        <pt x="29" y="247" on="0"/>
+        <pt x="31" y="257" on="1"/>
+        <pt x="44" y="333" on="0"/>
+        <pt x="95" y="385" on="1"/>
+        <pt x="161" y="447" on="0"/>
+        <pt x="317" y="447" on="0"/>
+        <pt x="374" y="402" on="1"/>
+        <pt x="397" y="382" on="0"/>
+        <pt x="409" y="366" on="1"/>
+        <pt x="414" y="359" on="0"/>
+        <pt x="415" y="359" on="1"/>
+        <pt x="419" y="363" on="0"/>
+        <pt x="423" y="369" on="1"/>
+        <pt x="487" y="448" on="0"/>
+        <pt x="578" y="448" on="1"/>
+        <pt x="660" y="448" on="0"/>
+        <pt x="749" y="336" on="0"/>
+      </contour>
+      <contour>
+        <pt x="329" y="376" on="1"/>
+        <pt x="292" y="411" on="0"/>
+        <pt x="245" y="411" on="1"/>
+        <pt x="209" y="411" on="0"/>
+        <pt x="182" y="391" on="1"/>
+        <pt x="147" y="368" on="0"/>
+        <pt x="132" y="324" on="1"/>
+        <pt x="121" y="291" on="0"/>
+        <pt x="121" y="223" on="1"/>
+        <pt x="121" y="167" on="0"/>
+        <pt x="127" y="139" on="1"/>
+        <pt x="136" y="90" on="0"/>
+        <pt x="196" y="27" on="0"/>
+        <pt x="245" y="27" on="1"/>
+        <pt x="293" y="27" on="0"/>
+        <pt x="329" y="63" on="1"/>
+        <pt x="374" y="111" on="0"/>
+        <pt x="374" y="220" on="1"/>
+        <pt x="374" y="330" on="0"/>
+      </contour>
+      <contour>
+        <pt x="667" y="278" on="1"/>
+        <pt x="660" y="387" on="0"/>
+        <pt x="598" y="408" on="1"/>
+        <pt x="594" y="409" on="0"/>
+        <pt x="579" y="411" on="1"/>
+        <pt x="561" y="411" on="0"/>
+        <pt x="547" y="406" on="1"/>
+        <pt x="483" y="384" on="0"/>
+        <pt x="466" y="305" on="1"/>
+        <pt x="460" y="283" on="0"/>
+        <pt x="460" y="269" on="1"/>
+        <pt x="460" y="267" on="0"/>
+        <pt x="564" y="267" on="1"/>
+        <pt x="667" y="267" on="1"/>
+      </contour>
+      <instructions><assembly>
+          NPUSHB[ ]	/* 10 values pushed */
+          0 1 0 10 23 1 1 2 2 74
+          MPPEM[ ]	/* MeasurePixelPerEm */
+          PUSHB[ ]	/* 1 value pushed */
+          44
+          LT[ ]	/* LessThan */
+          IF[ ]	/* If */
+          NPUSHB[ ]	/* 41 values pushed */
+          0 2 0 1 0 2 1 112 0 10 0 0 2 10 0 97 9 1 7 7 5 91 6 1 5
+          5 24 75 8 1 1 1 3 91 4 1 3 3 25 3 76
+          ELSE[ ]	/* Else */
+          NPUSHB[ ]	/* 39 values pushed */
+          0 2 0 1 0 2 1 112 6 1 5 9 1 7 10 5 7 99 0 10 0 0 2 10 0
+          97 8 1 1 1 3 91 4 1 3 3 25 3 76
+          EIF[ ]	/* EndIf */
+          NPUSHB[ ]	/* 16 values pushed */
+          82 79 74 73 41 35 40 26 37 37 19 36 18 11 6 29
+          CALL[ ]	/* CallFunction */
+        </assembly></instructions>
+    </TTGlyph>
+
     <TTGlyph name="one" xMin="83" yMin="0" xMax="427" yMax="666">
       <contour>
         <pt x="416" y="0" on="1"/>
@@ -15243,6 +16096,112 @@
           EIF[ ]	/* EndIf */
           NPUSHB[ ]	/* 15 values pushed */
           0 0 0 33 0 33 57 33 39 33 17 33 8 6 26
+          CALL[ ]	/* CallFunction */
+        </assembly></instructions>
+    </TTGlyph>
+
+    <TTGlyph name="oslash" xMin="28" yMin="-105" xMax="471" yMax="537">
+      <contour>
+        <pt x="348" y="425" on="1"/>
+        <pt x="412" y="535" on="1"/>
+        <pt x="412" y="537" on="0"/>
+        <pt x="414" y="537" on="1"/>
+        <pt x="414" y="535" on="0"/>
+        <pt x="430" y="528" on="1"/>
+        <pt x="445" y="519" on="1"/>
+        <pt x="443" y="515" on="0"/>
+        <pt x="434" y="499" on="0"/>
+        <pt x="417" y="471" on="0"/>
+        <pt x="410" y="457" on="1"/>
+        <pt x="379" y="404" on="1"/>
+        <pt x="382" y="401" on="0"/>
+        <pt x="405" y="380" on="0"/>
+        <pt x="409" y="376" on="1"/>
+        <pt x="471" y="306" on="0"/>
+        <pt x="471" y="214" on="1"/>
+        <pt x="471" y="119" on="0"/>
+        <pt x="343" y="-10" on="0"/>
+        <pt x="250" y="-10" on="1"/>
+        <pt x="195" y="-10" on="0"/>
+        <pt x="154" y="11" on="1"/>
+        <pt x="154" y="13" on="0"/>
+        <pt x="120" y="-47" on="0"/>
+        <pt x="86" y="-107" on="0"/>
+        <pt x="86" y="-105" on="1"/>
+        <pt x="82" y="-104" on="1"/>
+        <pt x="79" y="-102" on="0"/>
+        <pt x="70" y="-97" on="0"/>
+        <pt x="61" y="-91" on="0"/>
+        <pt x="58" y="-89" on="1"/>
+        <pt x="55" y="-87" on="1"/>
+        <pt x="88" y="-28" on="1"/>
+        <pt x="121" y="29" on="0"/>
+        <pt x="121" y="30" on="1"/>
+        <pt x="116" y="34" on="0"/>
+        <pt x="111" y="39" on="1"/>
+        <pt x="72" y="70" on="0"/>
+        <pt x="28" y="163" on="0"/>
+        <pt x="28" y="214" on="1"/>
+        <pt x="28" y="287" on="0"/>
+        <pt x="67" y="345" on="1"/>
+        <pt x="99" y="394" on="0"/>
+        <pt x="195" y="448" on="0"/>
+        <pt x="249" y="448" on="1"/>
+        <pt x="295" y="448" on="0"/>
+        <pt x="336" y="429" on="1"/>
+        <pt x="339" y="428" on="0"/>
+        <pt x="345" y="425" on="0"/>
+        <pt x="346" y="425" on="1"/>
+      </contour>
+      <contour>
+        <pt x="326" y="387" on="1"/>
+        <pt x="326" y="390" on="0"/>
+        <pt x="287" y="406" on="0"/>
+        <pt x="276" y="409" on="1"/>
+        <pt x="270" y="410" on="0"/>
+        <pt x="245" y="410" on="1"/>
+        <pt x="167" y="410" on="0"/>
+        <pt x="132" y="339" on="1"/>
+        <pt x="112" y="299" on="0"/>
+        <pt x="112" y="214" on="1"/>
+        <pt x="112" y="114" on="0"/>
+        <pt x="146" y="72" on="1"/>
+        <pt x="236" y="229" on="1"/>
+      </contour>
+      <contour>
+        <pt x="362" y="348" on="1"/>
+        <pt x="358" y="356" on="0"/>
+        <pt x="354" y="360" on="1"/>
+        <pt x="177" y="50" on="0"/>
+        <pt x="175" y="48" on="1"/>
+        <pt x="175" y="47" on="0"/>
+        <pt x="184" y="41" on="0"/>
+        <pt x="197" y="35" on="0"/>
+        <pt x="202" y="34" on="1"/>
+        <pt x="222" y="27" on="0"/>
+        <pt x="250" y="27" on="1"/>
+        <pt x="355" y="27" on="0"/>
+        <pt x="380" y="127" on="1"/>
+        <pt x="387" y="159" on="0"/>
+        <pt x="387" y="214" on="1"/>
+        <pt x="387" y="305" on="0"/>
+      </contour>
+      <instructions><assembly>
+          NPUSHB[ ]	/* 20 values pushed */
+          61 11 2 3 2 21 1 0 3 2 74 6 1 2 1 72 31 1 0 71
+          MPPEM[ ]	/* MeasurePixelPerEm */
+          PUSHB[ ]	/* 1 value pushed */
+          44
+          LT[ ]	/* LessThan */
+          IF[ ]	/* If */
+          NPUSHB[ ]	/* 21 values pushed */
+          0 2 2 1 91 0 1 1 24 75 0 3 3 0 91 0 0 0 25 0 76
+          ELSE[ ]	/* Else */
+          NPUSHB[ ]	/* 19 values pushed */
+          0 1 0 2 3 1 2 99 0 3 3 0 91 0 0 0 25 0 76
+          EIF[ ]	/* EndIf */
+          NPUSHB[ ]	/* 11 values pushed */
+          74 72 56 53 45 43 20 18 4 6 20
           CALL[ ]	/* CallFunction */
         </assembly></instructions>
     </TTGlyph>
@@ -24133,7 +25092,7 @@ http://scripts.sil.org/OFL
     <version value="1"/>
     <FFTimeStamp value="Tue Jul 31 14:57:19 2012"/>
     <sourceCreated value="Mon Oct 12 19:21:51 2009"/>
-    <sourceModified value="Mon Jun 29 22:52:11 2015"/>
+    <sourceModified value="Tue Jan 17 04:00:29 2017"/>
   </FFTM>
 
 </ttFont>

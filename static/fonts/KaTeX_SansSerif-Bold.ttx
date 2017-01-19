@@ -134,12 +134,12 @@
     <!-- Most of this table will be recalculated by the compiler -->
     <tableVersion value="1.0"/>
     <fontRevision value="1.0"/>
-    <checkSumAdjustment value="0x5fc774d"/>
+    <checkSumAdjustment value="0xf475b6c5"/>
     <magicNumber value="0x5f0f3cf5"/>
     <flags value="00000000 00011111"/>
     <unitsPerEm value="1000"/>
-    <created value="Mon Jun 29 22:52:19 2015"/>
-    <modified value="Mon Jun 29 22:52:19 2015"/>
+    <created value="Tue Jan 17 04:00:36 2017"/>
+    <modified value="Tue Jan 17 04:00:36 2017"/>
     <xMin value="-474"/>
     <yMin value="-250"/>
     <xMax value="1099"/>
@@ -12534,7 +12534,7 @@ http://scripts.sil.org/OFL
     <version value="1"/>
     <FFTimeStamp value="Tue Jul 31 14:57:19 2012"/>
     <sourceCreated value="Mon Oct 12 19:21:51 2009"/>
-    <sourceModified value="Mon Jun 29 22:52:14 2015"/>
+    <sourceModified value="Tue Jan 17 04:00:32 2017"/>
   </FFTM>
 
 </ttFont>
